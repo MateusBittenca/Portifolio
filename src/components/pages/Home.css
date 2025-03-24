@@ -1,0 +1,52 @@
+.perfil {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.perfil__content .links {
+    justify-content: center;
+}
+
+.perfil__content p{
+   text-align: justify;
+   max-width: 550px;
+   margin: 0 auto; 
+}
+
+.perfil__img img{
+    border-radius: 500px;
+    width: 200px;
+    height: 200px;
+}
+
+.projects__display {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 10px;
+}
+
+.projects__display > * {
+    scroll-snap-align: start;
+}
+
+
+
+.projects {
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(233, 239, 243);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact {
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}

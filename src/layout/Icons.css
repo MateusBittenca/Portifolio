@@ -1,0 +1,29 @@
+.icons ul {
+    display: flex;
+    /* Alinha os itens horizontalmente */
+    justify-content: center;
+    /* Centraliza os itens no eixo horizontal */
+    align-items: center;
+    /* Centraliza os itens no eixo vertical */
+    gap: 20px;
+    /* Espaçamento entre os itens */
+    padding: 0;
+    /* Remove o espaçamento padrão */
+    margin: 0;
+    /* Remove o espaçamento padrão */
+
+}
+
+.icons ul li {
+    list-style: none;
+}
+
+.icons ul li  {
+    font-size: 45px;
+    color: rgb(180, 210, 230);
+}
+
+.icons ul li:hover {
+    color: rgb(150, 180, 200);
+    transform: scale(1.1);
+}

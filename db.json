@@ -1,0 +1,17 @@
+{
+    "projects": [
+        {
+            "nome": "Meu Projeto Tech",
+            "tecnologias": [
+                "JavaScript",
+                "React",
+                "Node.js",
+                "MongoDB"
+            ],
+            "imagem": "https://example.com/imagem-do-pr ojeto.jpg",
+            "descricao": "Este é um projeto web desenvolvido com React no frontend e Node.js no backend. Ele permite aos usuários gerenciar tarefas de forma intuitiva e eficiente.",
+            "link":"https://gitHub"
+        }
+    ]
+}
+

@@ -1,0 +1,32 @@
+.card_project {
+    display: flex;
+    justify-content: center;
+}
+
+.card_project__content {
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.2);
+    width: 210px;
+    height: 310px;
+    overflow: hidden;
+    /* Oculta qualquer conteúdo que transborde */
+    word-wrap: break-word;
+    /* Quebra palavras longas */
+}
+
+.card_project__content p {
+    font-size: 13px;
+}
+
+.card_project__content:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.technologies {
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    color: rgb(180, 210, 230);
+}
