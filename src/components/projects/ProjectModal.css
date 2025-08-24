@@ -1,0 +1,203 @@
+.project-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--space-4);
+  backdrop-filter: blur(8px);
+}
+
+.project-modal {
+  background: var(--white);
+  border-radius: var(--radius-2xl);
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: var(--shadow-2xl);
+  border: 1px solid var(--gray-200);
+}
+
+.project-modal__close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background: var(--gray-100);
+  border: none;
+  border-radius: var(--radius-full);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--gray-600);
+  transition: all var(--transition-fast);
+  z-index: 10;
+}
+
+.project-modal__close:hover {
+  background: var(--gray-200);
+  color: var(--gray-800);
+  transform: scale(1.1);
+}
+
+.project-modal__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.project-modal__image {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-2xl) 0 0 0;
+}
+
+.project-modal__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 300px;
+}
+
+.project-modal__info {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.project-modal__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--gray-900);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.project-modal__description {
+  font-size: var(--font-size-lg);
+  color: var(--gray-600);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+.project-modal__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.project-modal__section h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--gray-800);
+  margin: 0 0 var(--space-3) 0;
+}
+
+.project-modal__section ul {
+  margin: 0;
+  padding-left: var(--space-4);
+}
+
+.project-modal__section li {
+  color: var(--gray-600);
+  margin-bottom: var(--space-2);
+  line-height: var(--line-height-relaxed);
+}
+
+.project-modal__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tech-tag {
+  padding: var(--space-2) var(--space-3);
+  background: var(--primary-50);
+  color: var(--primary-700);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid var(--primary-200);
+}
+
+.project-modal__links {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.project-modal__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: var(--primary-600);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-fast);
+  border: 1px solid var(--primary-600);
+}
+
+.project-modal__link:hover {
+  background: var(--primary-700);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-modal {
+    max-height: 95vh;
+    margin: var(--space-2);
+  }
+  
+  .project-modal__content {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-modal__image {
+    border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+  }
+  
+  .project-modal__info {
+    padding: var(--space-6);
+  }
+  
+  .project-modal__title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .project-modal__links {
+    flex-direction: column;
+  }
+  
+  .project-modal__link {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-modal-overlay {
+    padding: var(--space-2);
+  }
+  
+  .project-modal__info {
+    padding: var(--space-4);
+  }
+  
+  .project-modal__title {
+    font-size: var(--font-size-xl);
+  }
+}
