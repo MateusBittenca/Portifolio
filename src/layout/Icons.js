@@ -13,7 +13,7 @@ import {
     faJava
     
 } from "@fortawesome/free-brands-svg-icons";
-import { faDatabase } from "@fortawesome/free-solid-svg-icons";
+import { faDatabase, faFile } from "@fortawesome/free-solid-svg-icons";
 
 function Icons({ icons }) {
     // Mapeamento dos ícones para os objetos FontAwesome
@@ -28,7 +28,8 @@ function Icons({ icons }) {
         faNodeJs: faNodeJs,
         faDocker: faDocker,
         faMysql: faDatabase,
-        faJava: faJava
+        faJava: faJava,
+        faFile: faFile
     };
 
     return (

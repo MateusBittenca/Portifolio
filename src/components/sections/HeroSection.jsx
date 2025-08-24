@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faMapMarkerAlt, faFile } from "@fortawesome/free-solid-svg-icons";
 import './HeroSection.css';
 import EuImg from '../../assets/img/Eu.jpg';
 
@@ -37,9 +37,9 @@ function HeroSection() {
                             <a href="https://www.linkedin.com/in/mateus-ribeiro-leite-paes-bittencourt-60730a294" className="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                                 <FontAwesomeIcon icon={faLinkedin} />
                             </a>
-                            <button className="social-link" aria-label="Instagram">
-                                <FontAwesomeIcon icon={faInstagram} />
-                            </button>
+                            <a href="./src/pdf/Currículo.pdf" className="social-link" download="Currículo.pdf" target="_blank" rel="noopener noreferrer" aria-label="Currículo">
+                                <FontAwesomeIcon icon={faFile} />
+                            </a>
                         </div>
                     </div>
                 </div>
