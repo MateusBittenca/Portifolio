@@ -1,8 +1,8 @@
 import React from 'react';
-import HeroSection from '../sections/HeroSection';
-import SkillsSection from '../sections/SkillsSection';
-import ProjectsSection from '../sections/ProjectsSection';
-import ContactSection from '../sections/ContactSection';
+import HeroSection from '../../components/sections/HeroSection';
+import SkillsSection from '../../components/sections/SkillsSection';
+import ProjectsSection from '../../components/sections/ProjectsSection';
+import ContactSection from '../../components/sections/ContactSection';
 
 function Home() {
     return (
