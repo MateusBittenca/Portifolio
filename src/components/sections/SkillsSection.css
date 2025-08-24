@@ -1,0 +1,24 @@
+/* Skills Section */
+.skills {
+  padding: var(--section-padding) 0;
+  background: var(--white);
+}
+
+.skills__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills {
+    padding: var(--section-padding-mobile) 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills {
+    padding: var(--space-16) 0;
+  }
+}
