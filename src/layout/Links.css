@@ -10,11 +10,10 @@
 
 .links .icon {
     font-size: 30px;
-    color: rgb(180, 210, 230);
-
+    color: rgb(2, 116, 192);
 }
 
 .links .icon:hover {
-    color: rgb(150, 180, 200);
+    color: rgb(0, 148, 247);
     transform: scale(1.1);
 }
