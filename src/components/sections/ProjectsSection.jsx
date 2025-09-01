@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import ProjectCard from '../projects/ProjectCard';
 import ProjectModal from '../projects/ProjectModal';
-import './ProjectsSection.css';
+import portifolioImg from '../../assets/img/portifolio.png';
+import gastosImg from '../../assets/img/Sistema de gastos de obra.png';
+
 
 function ProjectsSection() {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -9,101 +11,38 @@ function ProjectsSection() {
 
     const projects = [
         { 
-            title: 'Portfólio Pessoal', 
-            description: 'Site pessoal desenvolvido com React, destacando habilidades e projetos com design moderno e responsivo.',
+            title: 'Portfólio Profissional', 
+            description: 'Website pessoal desenvolvido com React, apresentando projetos, habilidades técnicas e experiência profissional com design moderno e responsivo.',
             tech: 'React, CSS3, JavaScript, HTML5',
-            image: '/src/assets/img/portfolio-project.jpg',
+            image: portifolioImg,
             features: [
-                'Design responsivo e moderno',
-                'Seções organizadas para habilidades e projetos',
-                'Animações suaves e interativas',
-                'Formulário de contato funcional',
-                'Otimizado para SEO'
+                'Design responsivo e moderno com animações CSS',
+                'Seções organizadas para projetos e habilidades',
+                'Formulário de contato funcional integrado',
+                'Otimização para SEO e performance',
+                'Componentes reutilizáveis e código limpo'
             ],
-            challenges: 'Implementar um design atrativo mantendo a performance e acessibilidade, além de criar componentes reutilizáveis para facilitar manutenção futura.',
+            challenges: 'Criar uma interface atrativa que representasse minha identidade profissional, implementando animações suaves sem comprometer a performance, e estruturar o código de forma modular para facilitar futuras atualizações.',
             github: 'https://github.com/seu-usuario/portfolio',
-            demo: 'https://seu-portfolio.vercel.app'
+            demo: 'https://meu-portfolio.vercel.app'
         },
-        { 
-            title: 'Sistema de Gestão', 
-            description: 'Aplicação web completa para controle de estoque, vendas e relatórios empresariais.',
-            tech: 'PHP, MySQL, JavaScript, Bootstrap, jQuery',
-            image: '/src/assets/img/management-system.jpg',
+        {
+            title: 'Sistema de Gestão de Gastos de Obra',
+            description: 'Aplicação web completa para controle e monitoramento de gastos em projetos de construção civil, com dashboard interativo e relatórios detalhados.',
+            tech: 'React, Node.js, MongoDB, Tailwind CSS',
+            image: gastosImg,
             features: [
-                'Controle de estoque em tempo real',
-                'Gestão de vendas e clientes',
-                'Relatórios e dashboards',
-                'Sistema de usuários e permissões',
-                'Backup automático de dados'
+                'Dashboard interativo com gráficos e métricas',
+                'Controle de gastos por categoria e setor',
+                'Sistema de usuários com permissões',
+                'Relatórios exportáveis em PDF',
+                'Interface responsiva para mobile e desktop'
             ],
-            challenges: 'Desenvolver um sistema robusto que pudesse lidar com múltiplos usuários simultâneos e garantir a integridade dos dados em operações críticas.',
-            github: 'https://github.com/seu-usuario/management-system',
-            demo: 'https://demo-sistema.vercel.app'
-        },
-        { 
-            title: 'API REST', 
-            description: 'Backend robusto para aplicação mobile com autenticação JWT e documentação completa.',
-            tech: 'Python, Django, PostgreSQL, JWT, Swagger',
-            image: '/src/assets/img/api-rest.jpg',
-            features: [
-                'Autenticação JWT segura',
-                'Documentação automática com Swagger',
-                'Validação de dados robusta',
-                'Testes automatizados',
-                'Deploy com Docker'
-            ],
-            challenges: 'Implementar um sistema de autenticação seguro e escalável, além de criar uma documentação clara para facilitar o uso da API pelos desenvolvedores.',
-            github: 'https://github.com/seu-usuario/api-rest',
-            demo: 'https://api-docs.vercel.app'
-        },
-        { 
-            title: 'Dashboard Analytics', 
-            description: 'Interface moderna para visualização de dados e métricas com gráficos interativos.',
-            tech: 'JavaScript, Chart.js, D3.js, API REST, CSS3',
-            image: '/src/assets/img/dashboard.jpg',
-            features: [
-                'Gráficos interativos e responsivos',
-                'Filtros avançados de dados',
-                'Exportação de relatórios',
-                'Temas claro e escuro',
-                'Atualização em tempo real'
-            ],
-            challenges: 'Criar visualizações de dados que fossem tanto informativas quanto esteticamente agradáveis, garantindo boa performance mesmo com grandes volumes de dados.',
-            github: 'https://github.com/seu-usuario/dashboard',
-            demo: 'https://dashboard-demo.vercel.app'
-        },
-        { 
-            title: 'App Mobile', 
-            description: 'Aplicativo nativo para controle de tarefas e projetos com sincronização em nuvem.',
-            tech: 'React Native, Firebase, Redux, AsyncStorage',
-            image: '/src/assets/img/mobile-app.jpg',
-            features: [
-                'Sincronização offline/online',
-                'Notificações push',
-                'Temas personalizáveis',
-                'Backup na nuvem',
-                'Multiplataforma (iOS/Android)'
-            ],
-            challenges: 'Implementar sincronização eficiente entre dispositivos e nuvem, além de garantir boa performance em dispositivos com recursos limitados.',
-            github: 'https://github.com/seu-usuario/mobile-app',
-            demo: 'https://app-demo.vercel.app'
-        },
-        { 
-            title: 'E-commerce', 
-            description: 'Plataforma completa de vendas online com sistema de pagamentos e gestão de pedidos.',
-            tech: 'Node.js, Express, MongoDB, Stripe, AWS',
-            image: '/src/assets/img/ecommerce.jpg',
-            features: [
-                'Catálogo de produtos dinâmico',
-                'Sistema de pagamentos seguro',
-                'Gestão de pedidos e estoque',
-                'Painel administrativo',
-                'Integração com marketplaces'
-            ],
-            challenges: 'Desenvolver uma plataforma que fosse segura para transações financeiras e escalável para lidar com picos de tráfego durante promoções.',
-            github: 'https://github.com/seu-usuario/ecommerce',
-            demo: 'https://ecommerce-demo.vercel.app'
+            challenges: 'Desenvolver um sistema robusto para gestão financeira de obras, implementando validações complexas de orçamentos e criando visualizações de dados intuitivas para engenheiros e gestores.',
+            github: 'https://github.com/seu-usuario/sistema-gastos-obra',
+            demo: 'https://sistema-gastos-obra.vercel.app'
         }
+        
     ];
 
     const handleProjectClick = (project) => {

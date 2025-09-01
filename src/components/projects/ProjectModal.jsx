@@ -46,7 +46,7 @@ function ProjectModal({ project, isOpen, onClose }) {
                             {project.challenges && (
                                 <div className="project-modal__section">
                                     <h3>Desafios e Aprendizados</h3>
-                                    <p>{project.challenges}</p>
+                                    <p className="project-modal__challenges">{project.challenges}</p>
                                 </div>
                             )}
                             
