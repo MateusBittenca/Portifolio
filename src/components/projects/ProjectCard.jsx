@@ -21,7 +21,7 @@ function ProjectCard({ project, index, onClick }) {
                 
                 <div className="project-card__tech">
                     {project.tech.split(', ').map((tech, techIndex) => (
-                        <span key={techIndex} className="tech-tag">
+                        <span key={techIndex} className="tech-tag--card">
                             {tech}
                         </span>
                     ))}

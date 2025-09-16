@@ -4,7 +4,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faMapMarkerAlt, faFile } from "@fortawesome/free-solid-svg-icons";
 import './HeroSection.css';
 import EuImg from '../../assets/img/Eu.jpg';
-import curriculo from '../../pdf/Currículo.pdf';
+// Currículo agora está em public/assets/pdf/
 
 function HeroSection() {
     const nome = "Mateus Bittencourt";
@@ -38,7 +38,7 @@ function HeroSection() {
                             <a href="https://www.linkedin.com/in/mateus-ribeiro-leite-paes-bittencourt-60730a294" className="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                                 <FontAwesomeIcon icon={faLinkedin} />
                             </a>
-                            <a href={curriculo} className="social-link" download="Currículo.pdf" aria-label="Currículo">
+                            <a href="/assets/pdf/Currículo.pdf" className="social-link" download="Currículo.pdf" aria-label="Currículo">
                                 <FontAwesomeIcon icon={faFile} />
                             </a>
                         </div>

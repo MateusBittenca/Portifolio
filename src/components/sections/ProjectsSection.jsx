@@ -14,7 +14,12 @@ function ProjectsSection() {
             title: 'Portfólio Profissional', 
             description: 'Website pessoal desenvolvido com React, apresentando projetos, habilidades técnicas e experiência profissional com design moderno e responsivo.',
             tech: 'React, CSS3, JavaScript, HTML5',
-            image: portifolioImg,
+            image: portifolioImg, // Imagem principal (compatibilidade)
+            images: [
+                portifolioImg, 
+                portifolioImg,
+                portifolioImg
+            ], // Galeria de imagens
             features: [
                 'Design responsivo e moderno com animações CSS',
                 'Seções organizadas para projetos e habilidades',
@@ -30,7 +35,12 @@ function ProjectsSection() {
             title: 'Sistema de Gestão de Gastos de Obra',
             description: 'Aplicação web completa para controle e monitoramento de gastos em projetos de construção civil, com dashboard interativo e relatórios detalhados.',
             tech: 'React, Node.js, MongoDB, Tailwind CSS',
-            image: gastosImg,
+            image: gastosImg, // Imagem principal (compatibilidade)
+            images: [
+                gastosImg,
+                gastosImg,
+                gastosImg
+            ], // Galeria de imagens
             features: [
                 'Dashboard interativo com gráficos e métricas',
                 'Controle de gastos por categoria e setor',

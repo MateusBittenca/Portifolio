@@ -1,7 +1,52 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './ProjectModal.css';
 
 function ProjectModal({ project, isOpen, onClose }) {
+    // ✅ HOOKS SEMPRE NO TOPO - ANTES DE QUALQUER RETURN
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    
+    // Evita erro quando project é null
+    const images = (project && project.images) ? project.images : (project ? [project.image] : []);
+    
+    const nextImage = () => {
+        setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    };
+    
+    const prevImage = () => {
+        setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+    };
+    
+    const goToImage = (index) => {
+        setCurrentImageIndex(index);
+    };
+
+    // Navegação por teclado
+    useEffect(() => {
+        const handleKeyPress = (e) => {
+            if (!isOpen || images.length <= 1) return;
+            
+            if (e.key === 'ArrowLeft') {
+                prevImage();
+            } else if (e.key === 'ArrowRight') {
+                nextImage();
+            }
+        };
+
+        if (isOpen) {
+            document.addEventListener('keydown', handleKeyPress);
+        }
+        
+        return () => document.removeEventListener('keydown', handleKeyPress);
+    }, [isOpen, images.length]);
+
+    // Reset index quando abrir novo projeto
+    useEffect(() => {
+        if (isOpen) {
+            setCurrentImageIndex(0);
+        }
+    }, [project, isOpen]);
+
+    // ✅ EARLY RETURN AGORA VEM DEPOIS DOS HOOKS
     if (!isOpen || !project) return null;
 
     return (
@@ -14,8 +59,55 @@ function ProjectModal({ project, isOpen, onClose }) {
                 </button>
                 
                 <div className="project-modal__content">
-                    <div className="project-modal__image">
-                        <img src={project.image} alt={project.title} />
+                    <div className="project-modal__gallery">
+                        <div className="gallery__main">
+                            <div className="gallery__main-image">
+                                <img src={images[currentImageIndex]} alt={`${project.title} - Imagem ${currentImageIndex + 1}`} />
+                                
+                                {images.length > 1 && (
+                                    <>
+                                        <div className="gallery__counter">
+                                            {currentImageIndex + 1} de {images.length}
+                                        </div>
+                                        <button className="gallery__nav gallery__nav--prev" onClick={prevImage}>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <polyline points="15,18 9,12 15,6"></polyline>
+                                            </svg>
+                                        </button>
+                                        
+                                        <button className="gallery__nav gallery__nav--next" onClick={nextImage}>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <polyline points="9,18 15,12 9,6"></polyline>
+                                            </svg>
+                                        </button>
+                                        
+                                        <div className="gallery__indicators">
+                                            {images.map((_, index) => (
+                                                <button 
+                                                    key={index} 
+                                                    className={`gallery__indicator ${index === currentImageIndex ? 'gallery__indicator--active' : ''}`}
+                                                    onClick={() => goToImage(index)}
+                                                />
+                                            ))}
+                                        </div>
+                                    </>
+                                )}
+                            </div>
+                            
+                            {images.length > 1 && (
+                                <div className="gallery__thumbnails">
+                                    {images.map((image, index) => (
+                                        <button 
+                                            key={index} 
+                                            className={`gallery__thumbnail ${index === currentImageIndex ? 'gallery__thumbnail--active' : ''}`}
+                                            onClick={() => goToImage(index)}
+                                        >
+                                            <img src={image} alt={`${project.title} - Miniatura ${index + 1}`} />
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
                     </div>
                     
                     <div className="project-modal__info">
@@ -36,7 +128,7 @@ function ProjectModal({ project, isOpen, onClose }) {
                                 <h3>Tecnologias Utilizadas</h3>
                                 <div className="project-modal__tech">
                                     {project.tech.split(', ').map((tech, techIndex) => (
-                                        <span key={techIndex} className="tech-tag">
+                                        <span key={techIndex} className="tech-tag--modal">
                                             {tech}
                                         </span>
                                     ))}

@@ -1,5 +1,5 @@
 import React from 'react';
-import Icons from '../../layout/Icons';
+import Icons from '../../layout/Icons.jsx';
 import './SkillsSection.css';
 
 function SkillsSection() {

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import Header from './layout/Header';
-import Footer from './layout/Footer';
+import Header from './layout/Header.jsx';
+import Footer from './layout/Footer.jsx';
 import Home from './components/pages/Home';
 
 function App() {
