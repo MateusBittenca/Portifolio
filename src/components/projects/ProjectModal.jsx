@@ -4,6 +4,7 @@ import './ProjectModal.css';
 function ProjectModal({ project, isOpen, onClose }) {
     // ✅ HOOKS SEMPRE NO TOPO - ANTES DE QUALQUER RETURN
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [isImageZoomed, setIsImageZoomed] = useState(false);
     
     // Evita erro quando project é null
     const images = (project && project.images) ? project.images : (project ? [project.image] : []);
@@ -20,15 +21,31 @@ function ProjectModal({ project, isOpen, onClose }) {
         setCurrentImageIndex(index);
     };
 
+    const openImageZoom = () => {
+        setIsImageZoomed(true);
+    };
+
+    const closeImageZoom = () => {
+        setIsImageZoomed(false);
+    };
+
     // Navegação por teclado
     useEffect(() => {
         const handleKeyPress = (e) => {
-            if (!isOpen || images.length <= 1) return;
+            if (!isOpen) return;
             
-            if (e.key === 'ArrowLeft') {
-                prevImage();
-            } else if (e.key === 'ArrowRight') {
-                nextImage();
+            if (e.key === 'Escape') {
+                if (isImageZoomed) {
+                    closeImageZoom();
+                } else {
+                    onClose();
+                }
+            } else if (images.length > 1) {
+                if (e.key === 'ArrowLeft') {
+                    prevImage();
+                } else if (e.key === 'ArrowRight') {
+                    nextImage();
+                }
             }
         };
 
@@ -37,12 +54,13 @@ function ProjectModal({ project, isOpen, onClose }) {
         }
         
         return () => document.removeEventListener('keydown', handleKeyPress);
-    }, [isOpen, images.length]);
+    }, [isOpen, images.length, isImageZoomed]);
 
-    // Reset index quando abrir novo projeto
+    // Reset index e zoom quando abrir novo projeto
     useEffect(() => {
         if (isOpen) {
             setCurrentImageIndex(0);
+            setIsImageZoomed(false);
         }
     }, [project, isOpen]);
 
@@ -62,7 +80,12 @@ function ProjectModal({ project, isOpen, onClose }) {
                     <div className="project-modal__gallery">
                         <div className="gallery__main">
                             <div className="gallery__main-image">
-                                <img src={images[currentImageIndex]} alt={`${project.title} - Imagem ${currentImageIndex + 1}`} />
+                                <img 
+                                    src={images[currentImageIndex]} 
+                                    alt={`${project.title} - Imagem ${currentImageIndex + 1}`}
+                                    onClick={openImageZoom}
+                                    style={{ cursor: 'zoom-in' }}
+                                />
                                 
                                 {images.length > 1 && (
                                     <>
@@ -162,6 +185,45 @@ function ProjectModal({ project, isOpen, onClose }) {
                     </div>
                 </div>
             </div>
+            
+            {/* Overlay para imagem ampliada */}
+            {isImageZoomed && (
+                <div className="image-zoom-overlay" onClick={closeImageZoom}>
+                    <div className="image-zoom-container" onClick={(e) => e.stopPropagation()}>
+                        <button className="image-zoom-close" onClick={closeImageZoom}>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </button>
+                        
+                        <img 
+                            src={images[currentImageIndex]} 
+                            alt={`${project.title} - Imagem ampliada ${currentImageIndex + 1}`}
+                            className="image-zoom-img"
+                        />
+                        
+                        {images.length > 1 && (
+                            <>
+                                <button className="image-zoom-nav image-zoom-nav--prev" onClick={prevImage}>
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <polyline points="15,18 9,12 15,6"></polyline>
+                                    </svg>
+                                </button>
+                                
+                                <button className="image-zoom-nav image-zoom-nav--next" onClick={nextImage}>
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <polyline points="9,18 15,12 9,6"></polyline>
+                                    </svg>
+                                </button>
+                                
+                                <div className="image-zoom-counter">
+                                    {currentImageIndex + 1} de {images.length}
+                                </div>
+                            </>
+                        )}
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
