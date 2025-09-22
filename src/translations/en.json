@@ -1,0 +1,66 @@
+{
+  "navigation": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "profession": "FULLSTACK DEVELOPER",
+    "location": "São José dos Campos, SP",
+    "description": "I'm a programmer passionate about technology, seeking my first professional experience. I have a strong desire to learn, grow, and contribute to projects that make a difference. I'm dedicated to constantly studying programming and developing practical and creative solutions."
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Technologies and tools I use in development"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Some of the projects I've developed to demonstrate my skills",
+    "portfolio": {
+      "title": "Professional Portfolio",
+      "description": "Personal website developed with React, showcasing projects, technical skills, and professional experience with modern and responsive design.",
+      "features": [
+        "Responsive and modern design with CSS animations",
+        "Organized sections for projects and skills",
+        "Integrated functional contact form",
+        "SEO and performance optimization",
+        "Reusable components and clean code"
+      ],
+      "challenges": "Create an attractive interface that represented my professional identity, implementing smooth animations without compromising performance, and structuring code in a modular way to facilitate future updates."
+    },
+    "expenses": {
+      "title": "Construction Expense Management System",
+      "description": "Complete web application for controlling and monitoring expenses in construction projects, with interactive dashboard and detailed reports.",
+      "features": [
+        "Interactive dashboard with charts and metrics",
+        "Expense control by category and sector",
+        "User system with permissions",
+        "Exportable PDF reports",
+        "Responsive interface for mobile and desktop"
+      ],
+      "challenges": "Develop a robust system for construction financial management, implementing complex budget validations and creating intuitive data visualizations for engineers and managers."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's work together! Get in touch with me",
+    "callToAction": "Let's talk!",
+    "description": "I'm always open to new opportunities and collaborations. If you have a project in mind or would like to discuss possibilities, don't hesitate to get in touch.",
+    "email": "Email",
+    "phone": "Phone"
+  },
+  "footer": {
+    "copyright": "All rights reserved."
+  },
+  "common": {
+    "viewProject": "View Project",
+    "features": "Features",
+    "challenges": "Challenges",
+    "technologies": "Technologies",
+    "demo": "Demo",
+    "repository": "Repository",
+    "close": "Close",
+    "of": "of"
+  }
+}

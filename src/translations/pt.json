@@ -1,0 +1,66 @@
+{
+  "navigation": {
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "profession": "FULLSTACK DEVELOPER",
+    "location": "São José dos Campos, SP",
+    "description": "Sou um programador apaixonado por tecnologia, em busca da minha primeira experiência profissional. Tenho muita vontade de aprender, crescer e contribuir para projetos que façam a diferença. Dedico-me ao estudo constante de programação e desenvolvimento de soluções práticas e criativas."
+  },
+  "skills": {
+    "title": "Habilidades",
+    "subtitle": "Tecnologias e ferramentas que utilizo no desenvolvimento"
+  },
+  "projects": {
+    "title": "Projetos",
+    "subtitle": "Alguns dos projetos que desenvolvi para demonstrar minhas habilidades",
+    "portfolio": {
+      "title": "Portfólio Profissional",
+      "description": "Website pessoal desenvolvido com React, apresentando projetos, habilidades técnicas e experiência profissional com design moderno e responsivo.",
+      "features": [
+        "Design responsivo e moderno com animações CSS",
+        "Seções organizadas para projetos e habilidades",
+        "Formulário de contato funcional integrado",
+        "Otimização para SEO e performance",
+        "Componentes reutilizáveis e código limpo"
+      ],
+      "challenges": "Criar uma interface atrativa que representasse minha identidade profissional, implementando animações suaves sem comprometer a performance, e estruturar o código de forma modular para facilitar futuras atualizações."
+    },
+    "expenses": {
+      "title": "Sistema de Gestão de Gastos de Obra",
+      "description": "Aplicação web completa para controle e monitoramento de gastos em projetos de construção civil, com dashboard interativo e relatórios detalhados.",
+      "features": [
+        "Dashboard interativo com gráficos e métricas",
+        "Controle de gastos por categoria e setor",
+        "Sistema de usuários com permissões",
+        "Relatórios exportáveis em PDF",
+        "Interface responsiva para mobile e desktop"
+      ],
+      "challenges": "Desenvolver um sistema robusto para gestão financeira de obras, implementando validações complexas de orçamentos e criando visualizações de dados intuitivas para engenheiros e gestores."
+    }
+  },
+  "contact": {
+    "title": "Contato",
+    "subtitle": "Vamos trabalhar juntos! Entre em contato comigo",
+    "callToAction": "Vamos conversar!",
+    "description": "Estou sempre aberto a novas oportunidades e colaborações. Se você tem um projeto em mente ou gostaria de discutir possibilidades, não hesite em entrar em contato.",
+    "email": "Email",
+    "phone": "Telefone"
+  },
+  "footer": {
+    "copyright": "Todos os direitos reservados."
+  },
+  "common": {
+    "viewProject": "Ver Projeto",
+    "features": "Funcionalidades",
+    "challenges": "Desafios",
+    "technologies": "Tecnologias",
+    "demo": "Demo",
+    "repository": "Repositório",
+    "close": "Fechar",
+    "of": "de"
+  }
+}

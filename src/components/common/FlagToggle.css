@@ -1,0 +1,120 @@
+.flag-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(135deg, 
+        rgba(99, 102, 241, 0.1) 0%, 
+        rgba(139, 92, 246, 0.1) 50%, 
+        rgba(59, 130, 246, 0.1) 100%);
+    border: 2px solid rgba(99, 102, 241, 0.2);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(20px);
+    box-shadow: 
+        0 4px 15px rgba(99, 102, 241, 0.1),
+        0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.flag-toggle:hover {
+    background: linear-gradient(135deg, 
+        rgba(99, 102, 241, 0.15) 0%, 
+        rgba(139, 92, 246, 0.15) 50%, 
+        rgba(59, 130, 246, 0.15) 100%);
+    border-color: rgba(99, 102, 241, 0.3);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 
+        0 8px 25px rgba(99, 102, 241, 0.2),
+        0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.flag-toggle__flag {
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+    transform: scale(0.9);
+    filter: grayscale(20%);
+}
+
+.flag-toggle__flag--active {
+    opacity: 1;
+    transform: scale(1.1);
+    filter: grayscale(0%) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+}
+
+.flag-toggle:hover .flag-toggle__flag {
+    opacity: 0.8;
+    transform: scale(1);
+}
+
+.flag-toggle:hover .flag-toggle__flag--active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.flag-toggle__separator {
+    color: rgba(99, 102, 241, 0.4);
+    font-weight: 300;
+    font-size: 1.25rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.flag-toggle:hover .flag-toggle__separator {
+    opacity: 1;
+}
+
+/* Animação durante a troca */
+.flag-toggle--animating {
+    pointer-events: none;
+}
+
+.flag-toggle--animating .flag-toggle__flag {
+    animation: flagSwitch 0.4s ease-in-out;
+}
+
+@keyframes flagSwitch {
+    0% { transform: scale(1) rotateY(0deg); }
+    50% { transform: scale(1.1) rotateY(90deg); }
+    100% { transform: scale(1) rotateY(0deg); }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .flag-toggle {
+        padding: 0.625rem 1rem;
+        gap: 0.375rem;
+    }
+    
+    .flag-toggle__flag {
+        font-size: 1.25rem;
+    }
+    
+    .flag-toggle__separator {
+        font-size: 1rem;
+    }
+}
+
+/* Tema escuro */
+@media (prefers-color-scheme: dark) {
+    .flag-toggle {
+        background: linear-gradient(135deg, 
+            rgba(30, 41, 59, 0.8) 0%, 
+            rgba(51, 65, 85, 0.8) 50%, 
+            rgba(30, 41, 59, 0.8) 100%);
+        border-color: rgba(148, 163, 184, 0.2);
+    }
+    
+    .flag-toggle:hover {
+        background: linear-gradient(135deg, 
+            rgba(51, 65, 85, 0.9) 0%, 
+            rgba(71, 85, 105, 0.9) 50%, 
+            rgba(51, 65, 85, 0.9) 100%);
+        border-color: rgba(148, 163, 184, 0.3);
+    }
+    
+    .flag-toggle__separator {
+        color: rgba(148, 163, 184, 0.6);
+    }
+}
