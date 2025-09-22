@@ -1,0 +1,148 @@
+.minimal-language-toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    min-width: 52px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 18px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+/* Efeito hover sutil */
+.minimal-language-toggle:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.minimal-language-toggle:active {
+    transform: translateY(0);
+    transition: transform 0.1s ease;
+}
+
+.minimal-language-toggle__text {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #374151;
+    transition: all 0.3s ease;
+}
+
+.minimal-language-toggle:hover .minimal-language-toggle__text {
+    color: #111827;
+}
+
+/* Animação durante a troca */
+.minimal-language-toggle--animating {
+    pointer-events: none;
+}
+
+.minimal-language-toggle--animating .minimal-language-toggle__text {
+    animation: textFlip 0.3s ease-in-out;
+}
+
+@keyframes textFlip {
+    0% { 
+        opacity: 1;
+        transform: rotateY(0deg) scale(1);
+    }
+    50% { 
+        opacity: 0.3;
+        transform: rotateY(90deg) scale(0.8);
+    }
+    100% { 
+        opacity: 1;
+        transform: rotateY(0deg) scale(1);
+    }
+}
+
+/* Estado de foco para acessibilidade */
+.minimal-language-toggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .minimal-language-toggle {
+        padding: 0.375rem 0.75rem;
+        min-width: 44px;
+        height: 32px;
+        border-radius: 16px;
+    }
+    
+    .minimal-language-toggle__text {
+        font-size: 0.8125rem;
+    }
+}
+
+/* Tema escuro */
+@media (prefers-color-scheme: dark) {
+    .minimal-language-toggle {
+        background: rgba(0, 0, 0, 0.2);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .minimal-language-toggle:hover {
+        background: rgba(0, 0, 0, 0.3);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .minimal-language-toggle__text {
+        color: #e5e7eb;
+    }
+    
+    .minimal-language-toggle:hover .minimal-language-toggle__text {
+        color: #f9fafb;
+    }
+}
+
+/* Versão ainda mais minimalista para espaços muito pequenos */
+.minimal-language-toggle--tiny {
+    padding: 0.25rem 0.5rem;
+    min-width: 36px;
+    height: 28px;
+    border-radius: 14px;
+}
+
+.minimal-language-toggle--tiny .minimal-language-toggle__text {
+    font-size: 0.75rem;
+}
+
+/* Variante com cor de destaque */
+.minimal-language-toggle--accent {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1));
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+.minimal-language-toggle--accent:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(147, 51, 234, 0.15));
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.minimal-language-toggle--accent .minimal-language-toggle__text {
+    color: #1d4ed8;
+}
+
+.minimal-language-toggle--accent:hover .minimal-language-toggle__text {
+    color: #1e40af;
+}
+
+@media (prefers-color-scheme: dark) {
+    .minimal-language-toggle--accent .minimal-language-toggle__text {
+        color: #60a5fa;
+    }
+    
+    .minimal-language-toggle--accent:hover .minimal-language-toggle__text {
+        color: #93c5fd;
+    }
+}
