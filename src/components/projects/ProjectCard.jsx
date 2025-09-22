@@ -1,13 +1,16 @@
 import React from 'react';
+import { useTranslation } from '../../hooks/useTranslation';
 import './ProjectCard.css';
 
 function ProjectCard({ project, index, onClick }) {
+    const { t } = useTranslation();
+    
     return (
         <div className="project-card" onClick={() => onClick(project)}>
             <div className="project-card__image">
                 <img src={project.image} alt={project.title} />
                 <div className="project-card__overlay">
-                    <span className="project-card__view">Ver detalhes</span>
+                    <span className="project-card__view">{t('common.viewProject')}</span>
                 </div>
             </div>
             
@@ -29,7 +32,7 @@ function ProjectCard({ project, index, onClick }) {
                 
                 <div className="project-card__actions">
                     <button className="project-card__button">
-                        Ver projeto →
+                        {t('common.viewProject')} →
                     </button>
                 </div>
             </div>

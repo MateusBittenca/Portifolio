@@ -43,7 +43,7 @@
 
 /* Cores dinâmicas para cada tecnologia no hover */
 .icons ul li:hover svg {
-  color: var(--primary-500);
+  color: var(--hover-color);
 }
 
 /* Responsive */

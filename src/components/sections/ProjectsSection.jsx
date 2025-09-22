@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from '../../hooks/useTranslation';
 import ProjectCard from '../projects/ProjectCard';
 import ProjectModal from '../projects/ProjectModal';
 import portifolioImg from '../../assets/img/portifolio.png';
@@ -6,13 +7,14 @@ import gastosImg from '../../assets/img/Sistema de gastos de obra.png';
 
 
 function ProjectsSection() {
+    const { t } = useTranslation();
     const [selectedProject, setSelectedProject] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const projects = [
         { 
-            title: 'Portfólio Profissional', 
-            description: 'Website pessoal desenvolvido com React, apresentando projetos, habilidades técnicas e experiência profissional com design moderno e responsivo.',
+            title: t('projects.portfolio.title'),
+            description: t('projects.portfolio.description'),
             tech: 'React, CSS3, JavaScript, HTML5',
             image: portifolioImg, // Imagem principal (compatibilidade)
             images: [
@@ -20,20 +22,14 @@ function ProjectsSection() {
                 portifolioImg,
                 portifolioImg
             ], // Galeria de imagens
-            features: [
-                'Design responsivo e moderno com animações CSS',
-                'Seções organizadas para projetos e habilidades',
-                'Formulário de contato funcional integrado',
-                'Otimização para SEO e performance',
-                'Componentes reutilizáveis e código limpo'
-            ],
-            challenges: 'Criar uma interface atrativa que representasse minha identidade profissional, implementando animações suaves sem comprometer a performance, e estruturar o código de forma modular para facilitar futuras atualizações.',
+            features: t('projects.portfolio.features'),
+            challenges: t('projects.portfolio.challenges'),
             github: 'https://github.com/seu-usuario/portfolio',
             demo: 'https://meu-portfolio.vercel.app'
         },
         {
-            title: 'Sistema de Gestão de Gastos de Obra',
-            description: 'Aplicação web completa para controle e monitoramento de gastos em projetos de construção civil, com dashboard interativo e relatórios detalhados.',
+            title: t('projects.expenses.title'),
+            description: t('projects.expenses.description'),
             tech: 'React, Node.js, MongoDB, Tailwind CSS',
             image: gastosImg, // Imagem principal (compatibilidade)
             images: [
@@ -41,14 +37,8 @@ function ProjectsSection() {
                 gastosImg,
                 gastosImg
             ], // Galeria de imagens
-            features: [
-                'Dashboard interativo com gráficos e métricas',
-                'Controle de gastos por categoria e setor',
-                'Sistema de usuários com permissões',
-                'Relatórios exportáveis em PDF',
-                'Interface responsiva para mobile e desktop'
-            ],
-            challenges: 'Desenvolver um sistema robusto para gestão financeira de obras, implementando validações complexas de orçamentos e criando visualizações de dados intuitivas para engenheiros e gestores.',
+            features: t('projects.expenses.features'),
+            challenges: t('projects.expenses.challenges'),
             github: 'https://github.com/seu-usuario/sistema-gastos-obra',
             demo: 'https://sistema-gastos-obra.vercel.app'
         }
@@ -69,8 +59,8 @@ function ProjectsSection() {
         <section id="projects" className="projects">
             <div className="container">
                 <div className="section-header">
-                    <h2>Projetos</h2>
-                    <p>Alguns dos projetos que desenvolvi para demonstrar minhas habilidades</p>
+                    <h2>{t('projects.title')}</h2>
+                    <p>{t('projects.subtitle')}</p>
                 </div>
                 
                 <div className="projects__grid">

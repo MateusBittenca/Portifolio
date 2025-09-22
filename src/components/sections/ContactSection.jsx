@@ -1,9 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from '../../hooks/useTranslation';
 import './ContactSection.css';
 
 function ContactSection() {
+    const { t } = useTranslation();
     const telefone = "12 99112-5282";
     const email = "mpbittenc@gmail.com";
 
@@ -11,14 +13,14 @@ function ContactSection() {
         <section id="contact" className="contact">
             <div className="container">
                 <div className="section-header">
-                    <h2>Contato</h2>
-                    <p>Vamos trabalhar juntos! Entre em contato comigo</p>
+                    <h2>{t('contact.title')}</h2>
+                    <p>{t('contact.subtitle')}</p>
                 </div>
                 
                 <div className="contact__content">
                     <div className="contact__text">
-                        <h3>Vamos conversar!</h3>
-                        <p>Estou sempre aberto a novas oportunidades e colaborações. Se você tem um projeto em mente ou gostaria de discutir possibilidades, não hesite em entrar em contato.</p>
+                        <h3>{t('contact.callToAction')}</h3>
+                        <p>{t('contact.description')}</p>
                     </div>
                     
                     <div className="contact__info">
@@ -28,7 +30,7 @@ function ContactSection() {
                             </div>
                             <div className="contact-details">
                                 <p className="contact-value">{email}</p>
-                                <p className="contact-label">Email</p>
+                                <p className="contact-label">{t('contact.email')}</p>
                             </div>
                         </div>
                         
@@ -38,7 +40,7 @@ function ContactSection() {
                             </div>
                             <div className="contact-details">
                                 <p className="contact-value">{telefone}</p>
-                                <p className="contact-label">Telefone</p>
+                                <p className="contact-label">{t('contact.phone')}</p>
                             </div>
                         </div>
                     </div>

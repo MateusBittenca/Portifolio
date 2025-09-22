@@ -1,8 +1,10 @@
 import React from 'react';
+import { useTranslation } from '../../hooks/useTranslation';
 import Icons from '../../layout/Icons.jsx';
 import './SkillsSection.css';
 
 function SkillsSection() {
+    const { t } = useTranslation();
     const skillsIcons = [
         { icon: 'faHtml5', name: 'HTML5', color: '#E34F26' },
         { icon: 'faCss3', name: 'CSS3', color: '#1572B6' },
@@ -21,8 +23,8 @@ function SkillsSection() {
         <section id="skills" className="skills">
             <div className="container">
                 <div className="section-header">
-                    <h2>Habilidades</h2>
-                    <p>Tecnologias e ferramentas que utilizo no desenvolvimento</p>
+                    <h2>{t('skills.title')}</h2>
+                    <p>{t('skills.subtitle')}</p>
                 </div>
                 
                 <div className="skills__icons">

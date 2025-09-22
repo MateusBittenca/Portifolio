@@ -2,15 +2,14 @@ import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faMapMarkerAlt, faFile } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from '../../hooks/useTranslation';
 import './HeroSection.css';
 import EuImg from '../../assets/img/Eu.jpg';
 // Currículo agora está em public/assets/pdf/
 
 function HeroSection() {
+    const { t } = useTranslation();
     const nome = "Mateus Bittencourt";
-    const profissao = "FULLSTACK DEVELOPER";
-    const cidade = "São José dos Campos, SP";
-    const descricao = "Sou um programador apaixonado por tecnologia, em busca da minha primeira experiência profissional. Tenho muita vontade de aprender, crescer e contribuir para projetos que façam a diferença. Dedico-me ao estudo constante de programação e desenvolvimento de soluções práticas e criativas.";
 
     return (
         <section id="about" className="hero">
@@ -22,14 +21,14 @@ function HeroSection() {
                         </div>
                         
                         <h1 className="hero__name">{nome}</h1>
-                        <p className="hero__title">{profissao}</p>
+                        <p className="hero__title">{t('hero.profession')}</p>
                         
                         <div className="hero__location">
                             <FontAwesomeIcon icon={faMapMarkerAlt} />
-                            <span>{cidade}</span>
+                            <span>{t('hero.location')}</span>
                         </div>
                         
-                        <p className="hero__description">{descricao}</p>
+                        <p className="hero__description">{t('hero.description')}</p>
                         
                         <div className="hero__social">
                             <a href="https://github.com/MateusBittenca" className="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
