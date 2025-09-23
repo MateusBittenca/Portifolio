@@ -1,0 +1,37 @@
+.flag-test {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+}
+
+.flag-test h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+}
+
+.flag-test__container {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.flag-test__flag {
+    font-size: 2rem;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Android Emoji", "EmojiSymbols", "Twemoji", "EmojiOne", emoji, sans-serif;
+    display: inline-block;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flag-test p {
+    margin: 0;
+    font-size: 0.875rem;
+    opacity: 0.8;
+}

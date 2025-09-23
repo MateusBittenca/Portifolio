@@ -1,0 +1,153 @@
+.robust-flag-toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    min-width: 90px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    font-family: inherit;
+}
+
+.robust-flag-toggle:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.robust-flag-toggle:active {
+    transform: translateY(0);
+    transition: transform 0.1s ease;
+}
+
+.robust-flag-toggle__flag {
+    font-size: 1.25rem;
+    line-height: 1;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+    transform: scale(0.9);
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Força o uso de emojis */
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Android Emoji", "EmojiSymbols", "Twemoji", "EmojiOne", emoji, sans-serif;
+    /* Garante que o emoji seja renderizado */
+    unicode-bidi: normal;
+    direction: ltr;
+    text-transform: none;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+
+.robust-flag-toggle__flag.active {
+    opacity: 1;
+    transform: scale(1.1);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.robust-flag-toggle:hover .robust-flag-toggle__flag {
+    opacity: 0.8;
+    transform: scale(1);
+}
+
+.robust-flag-toggle:hover .robust-flag-toggle__flag.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.robust-flag-toggle__separator {
+    color: rgba(156, 163, 175, 0.6);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    user-select: none;
+}
+
+.robust-flag-toggle:hover .robust-flag-toggle__separator {
+    opacity: 1;
+}
+
+.robust-flag-toggle--animating {
+    pointer-events: none;
+}
+
+.robust-flag-toggle--animating .robust-flag-toggle__flag {
+    animation: flagFlip 0.3s ease-in-out;
+}
+
+@keyframes flagFlip {
+    0% { 
+        opacity: 1;
+        transform: rotateY(0deg) scale(1);
+    }
+    50% { 
+        opacity: 0.3;
+        transform: rotateY(90deg) scale(0.8);
+    }
+    100% { 
+        opacity: 1;
+        transform: rotateY(0deg) scale(1);
+    }
+}
+
+.robust-flag-toggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+@media (max-width: 768px) {
+    .robust-flag-toggle {
+        padding: 0.375rem 0.75rem;
+        gap: 0.375rem;
+        min-width: 80px;
+        height: 36px;
+        border-radius: 18px;
+    }
+    
+    .robust-flag-toggle__flag {
+        font-size: 1.125rem;
+    }
+    
+    .robust-flag-toggle__separator {
+        font-size: 0.875rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .robust-flag-toggle {
+        background: rgba(0, 0, 0, 0.2);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .robust-flag-toggle:hover {
+        background: rgba(0, 0, 0, 0.3);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Fallback para navegadores que não suportam emojis */
+@supports not (font-family: "Apple Color Emoji") {
+    .robust-flag-toggle__flag {
+        font-family: Arial, sans-serif;
+        font-size: 0.875rem;
+        font-weight: bold;
+    }
+    
+    .robust-flag-toggle__flag.active {
+        color: #3b82f6;
+    }
+}
