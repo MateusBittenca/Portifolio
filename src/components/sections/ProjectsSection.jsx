@@ -8,6 +8,9 @@ import portifolioImg3 from '../../assets/img/portifolio-3.png';
 import gastosImg2 from '../../assets/img/sistema de gastos de obra-2.png';
 import gastosImg3 from '../../assets/img/sistema de gastos de obra-3.png';
 import gastosImg from '../../assets/img/Sistema de gastos de obra.png';
+import tccImg from '../../assets/img/TCC.png';
+import tccImg2 from '../../assets/img/TCC-2.png';
+import tccImg3 from '../../assets/img/TCC-3.png';
 
 
 function ProjectsSection() {
@@ -28,7 +31,7 @@ function ProjectsSection() {
             ], // Galeria de imagens
             features: t('projects.portfolio.features'),
             challenges: t('projects.portfolio.challenges'),
-            github: 'https://github.com/seu-usuario/portfolio',
+            github: 'https://github.com/MateusBittenca/Portifolio',
             demo: 'https://meu-portfolio.vercel.app'
         },
         {
@@ -43,8 +46,23 @@ function ProjectsSection() {
             ], // Galeria de imagens
             features: t('projects.expenses.features'),
             challenges: t('projects.expenses.challenges'),
-            github: 'https://github.com/seu-usuario/sistema-gastos-obra',
+            github: 'https://github.com/MateusBittenca/Or-amentos-sistema',
             demo: 'https://sistema-gastos-obra.vercel.app'
+        },
+        {
+            title: t('projects.TCC.title'),
+            description: t('projects.TCC.description'),
+            tech: 'React, Node.js, MongoDB, Tailwind CSS',
+            image: tccImg, // Imagem principal (compatibilidade)
+            images: [
+                tccImg,
+                tccImg2,
+                tccImg3
+            ], // Galeria de imagens
+            features: t('projects.TCC.features'),
+            challenges: t('projects.TCC.challenges'),
+            github: 'https://github.com/MateusBittenca/TCC',
+            
         }
         
     ];

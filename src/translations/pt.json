@@ -40,6 +40,18 @@
         "Interface responsiva para mobile e desktop"
       ],
       "challenges": "Desenvolver um sistema robusto para gestão financeira de obras, implementando validações complexas de orçamentos e criando visualizações de dados intuitivas para engenheiros e gestores."
+    },
+    "TCC": {
+      "title": "TCC",
+      "description": "TCC desenvolvido para a o curso técnico em informática, com objetivo de avaliar o conhecimento adquirido durante o curso.",
+      "features": [
+        "Implementação de um sistema de controle de atividade física,treinos e saúde",
+        "Sistema de usuários com permissões",
+        "Interface responsiva para mobile e desktop",
+        "Otimização para SEO e performance",
+        "Visualização de exercícios corretos para o usuário"
+      ],
+      "challenges": "Desenvolver um sistema robusto para gestão de atividade física, treinos e saúde, implementando validações complexas de exercícios e criando visualizações de dados intuitivas para usuários."
     }
   },
   "contact": {
