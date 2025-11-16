@@ -20,3 +20,4 @@ function SimpleFlagToggle() {
 }
 
 export default SimpleFlagToggle;
+

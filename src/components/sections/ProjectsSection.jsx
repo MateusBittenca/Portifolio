@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from '../../hooks/useTranslation';
 import ProjectCard from '../projects/ProjectCard';
 import ProjectModal from '../projects/ProjectModal';
+import './ProjectsSection.css';
 import portifolioImg from '../../assets/img/portifolio.png';
 import portifolioImg2 from '../../assets/img/portifolio-2.png';
 import portifolioImg3 from '../../assets/img/portifolio-3.png';
@@ -84,17 +85,17 @@ function ProjectsSection() {
                     <h2>{t('projects.title')}</h2>
                     <p>{t('projects.subtitle')}</p>
                 </div>
-                
-                <div className="projects__grid">
-                    {projects.map((project, index) => (
-                        <ProjectCard 
-                            key={index} 
-                            project={project} 
-                            index={index}
-                            onClick={handleProjectClick}
-                        />
-                    ))}
-                </div>
+            </div>
+            
+            <div className="projects__grid">
+                {projects.map((project, index) => (
+                    <ProjectCard 
+                        key={index} 
+                        project={project} 
+                        index={index}
+                        onClick={handleProjectClick}
+                    />
+                ))}
             </div>
 
             <ProjectModal 

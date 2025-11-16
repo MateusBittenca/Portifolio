@@ -2,19 +2,61 @@
 .projects {
   padding: var(--section-padding) 0;
   background: var(--gray-50);
+  width: 100%;
+  overflow-x: hidden; /* Previne scroll horizontal na seção */
 }
 
 .projects__grid {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  align-items: flex-start;
+  gap: 24px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: var(--space-6);
+  margin-top: var(--space-8);
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  justify-content: center; /* Centraliza quando há poucos projetos */
+  /* Esconde a scrollbar mas mantém funcionalidade */
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-500) var(--gray-100);
+}
+
+/* Em telas grandes, adiciona padding lateral para centralizar melhor */
+@media (min-width: 1200px) {
+  .projects__grid {
+    padding-left: calc((100vw - var(--container-max-width)) / 2 + var(--space-6));
+    padding-right: calc((100vw - var(--container-max-width)) / 2 + var(--space-6));
+  }
+}
+
+/* Quando o conteúdo ultrapassar a largura disponível, 
+   o scroll horizontal será ativado automaticamente */
+
+/* Estilização da scrollbar para navegadores WebKit (Chrome, Safari, Edge) */
+.projects__grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects__grid::-webkit-scrollbar-track {
+  background: var(--gray-100);
+  border-radius: var(--radius-full);
+}
+
+.projects__grid::-webkit-scrollbar-thumb {
+  background: var(--primary-500);
+  border-radius: var(--radius-full);
+  transition: background var(--transition-base);
+}
+
+.projects__grid::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-600);
 }
 
 .projects__grid .project-card {
-  width: 400px;
+  min-width: 380px;
+  max-width: 380px;
   flex-shrink: 0;
   animation: fadeInUp 0.6s ease-out;
   animation-fill-mode: both;
@@ -35,9 +77,33 @@
   }
 }
 
+/* Responsive - tablets */
+@media (max-width: 1024px) {
+  .projects__grid .project-card {
+    min-width: 340px;
+    max-width: 340px;
+  }
+}
+
+/* Responsive - mobile */
+@media (max-width: 768px) {
+  .projects__grid {
+    gap: 16px;
+    padding: var(--space-4);
+    margin-top: var(--space-6);
+    justify-content: flex-start; /* Em mobile, começa da esquerda para scroll */
+  }
+  
+  .projects__grid .project-card {
+    min-width: 300px;
+    max-width: 300px;
+  }
+}
+
 /* Apenas para mobile muito pequeno */
 @media (max-width: 450px) {
   .projects__grid .project-card {
-    width: 350px;
+    min-width: 280px;
+    max-width: 280px;
   }
 }
