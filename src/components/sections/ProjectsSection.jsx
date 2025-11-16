@@ -38,7 +38,7 @@ function ProjectsSection() {
         {
             title: t('projects.expenses.title'),
             description: t('projects.expenses.description'),
-            tech: 'React, Node.js, MongoDB, Tailwind CSS',
+            tech: 'Python, MySQL, Tailwind CSS , FastAPI',
             image: gastosImg, // Imagem principal (compatibilidade)
             images: [
                 gastosImg,
@@ -53,7 +53,7 @@ function ProjectsSection() {
         {
             title: t('projects.TCC.title'),
             description: t('projects.TCC.description'),
-            tech: 'React, Node.js, MongoDB, Tailwind CSS',
+            tech: 'JavaScript, Node.js, MySQL, Tailwind CSS',
             image: tccImg, // Imagem principal (compatibilidade)
             images: [
                 tccImg,
