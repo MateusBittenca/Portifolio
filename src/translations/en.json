@@ -40,6 +40,18 @@
         "Responsive interface for mobile and desktop"
       ],
       "challenges": "Develop a robust system for construction financial management, implementing complex budget validations and creating intuitive data visualizations for engineers and managers."
+    },
+    "TCC": {
+      "title": "Final Project (TCC)",
+      "description": "Final project developed for the technical computer science course, with the objective of evaluating the knowledge acquired during the course.",
+      "features": [
+        "Implementation of a physical activity, training and health control system",
+        "User system with permissions",
+        "Responsive interface for mobile and desktop",
+        "SEO and performance optimization",
+        "Visualization of correct exercises for the user"
+      ],
+      "challenges": "Develop a robust system for physical activity, training and health management, implementing complex exercise validations and creating intuitive data visualizations for users."
     }
   },
   "contact": {
