@@ -3,40 +3,42 @@
   padding: var(--section-padding) 0;
   background: var(--gray-50);
   width: 100%;
-  overflow-x: hidden; /* Previne scroll horizontal na seção */
+  overflow-x: hidden;
+}
+
+.projects__carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .projects__grid {
   display: flex;
   flex-direction: row;
+  align-items: stretch;
   gap: 24px;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: var(--space-6);
+  padding: var(--space-6) var(--space-16);
   margin-top: var(--space-8);
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   width: 100%;
-  justify-content: center; /* Centraliza quando há poucos projetos */
-  /* Esconde a scrollbar mas mantém funcionalidade */
   scrollbar-width: thin;
   scrollbar-color: var(--primary-500) var(--gray-100);
 }
 
-/* Em telas grandes, adiciona padding lateral para centralizar melhor */
 @media (min-width: 1200px) {
   .projects__grid {
-    padding-left: calc((100vw - var(--container-max-width)) / 2 + var(--space-6));
-    padding-right: calc((100vw - var(--container-max-width)) / 2 + var(--space-6));
+    padding-left: calc((100vw - var(--container-max-width)) / 2 + var(--space-16));
+    padding-right: calc((100vw - var(--container-max-width)) / 2 + var(--space-16));
   }
 }
 
-/* Quando o conteúdo ultrapassar a largura disponível, 
-   o scroll horizontal será ativado automaticamente */
-
-/* Estilização da scrollbar para navegadores WebKit (Chrome, Safari, Edge) */
 .projects__grid::-webkit-scrollbar {
-  height: 8px;
+  height: 6px;
 }
 
 .projects__grid::-webkit-scrollbar-track {
@@ -45,9 +47,8 @@
 }
 
 .projects__grid::-webkit-scrollbar-thumb {
-  background: var(--primary-500);
+  background: var(--primary-400);
   border-radius: var(--radius-full);
-  transition: background var(--transition-base);
 }
 
 .projects__grid::-webkit-scrollbar-thumb:hover {
@@ -55,9 +56,11 @@
 }
 
 .projects__grid .project-card {
-  min-width: 380px;
-  max-width: 380px;
+  min-width: 340px;
+  max-width: 340px;
+  width: 340px;
   flex-shrink: 0;
+  scroll-snap-align: start;
   animation: fadeInUp 0.6s ease-out;
   animation-fill-mode: both;
 }
@@ -65,6 +68,7 @@
 .projects__grid .project-card:nth-child(1) { animation-delay: 0.1s; }
 .projects__grid .project-card:nth-child(2) { animation-delay: 0.2s; }
 .projects__grid .project-card:nth-child(3) { animation-delay: 0.3s; }
+.projects__grid .project-card:nth-child(4) { animation-delay: 0.4s; }
 
 @keyframes fadeInUp {
   from {
@@ -77,33 +81,118 @@
   }
 }
 
-/* Responsive - tablets */
+/* Navigation arrows */
+.projects__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--gray-200);
+  background: var(--white);
+  color: var(--gray-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-fast);
+}
+
+.projects__nav:hover:not(:disabled) {
+  background: var(--primary-600);
+  color: var(--white);
+  border-color: var(--primary-600);
+  box-shadow: var(--shadow-lg);
+}
+
+.projects__nav:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.projects__nav--prev {
+  left: var(--space-4);
+}
+
+.projects__nav--next {
+  right: var(--space-4);
+}
+
+/* Hint + dots */
+.projects__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  padding-bottom: var(--space-2);
+}
+
+.projects__hint {
+  font-size: var(--font-size-sm);
+  color: var(--gray-400);
+  margin: 0;
+}
+
+.projects__dots {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.projects__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  border: none;
+  background: var(--gray-300);
+  cursor: pointer;
+  padding: 0;
+  transition: all var(--transition-fast);
+}
+
+.projects__dot--active {
+  background: var(--primary-600);
+  width: 24px;
+}
+
+.projects__dot:hover:not(.projects__dot--active) {
+  background: var(--primary-300);
+}
+
+/* Responsive */
 @media (max-width: 1024px) {
   .projects__grid .project-card {
-    min-width: 340px;
-    max-width: 340px;
+    min-width: 320px;
+    max-width: 320px;
+    width: 320px;
   }
 }
 
-/* Responsive - mobile */
 @media (max-width: 768px) {
   .projects__grid {
     gap: 16px;
     padding: var(--space-4);
     margin-top: var(--space-6);
-    justify-content: flex-start; /* Em mobile, começa da esquerda para scroll */
   }
-  
-  .projects__grid .project-card {
-    min-width: 300px;
-    max-width: 300px;
-  }
-}
 
-/* Apenas para mobile muito pequeno */
-@media (max-width: 450px) {
   .projects__grid .project-card {
     min-width: 280px;
     max-width: 280px;
+    width: 280px;
+  }
+
+  .projects__nav {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .projects__grid .project-card {
+    min-width: 260px;
+    max-width: 260px;
+    width: 260px;
   }
 }

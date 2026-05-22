@@ -17,6 +17,9 @@
   "projects": {
     "title": "Projetos",
     "subtitle": "Alguns dos projetos que desenvolvi para demonstrar minhas habilidades",
+    "scrollHint": "Arraste para ver mais projetos",
+    "prevProject": "Projeto anterior",
+    "nextProject": "Próximo projeto",
     "fi": {
       "title": "Finanças Pessoais (Fi)",
       "description": "Aplicação web full-stack para controle financeiro pessoal com dashboard interativo, orçamento por categoria, metas e transações recorrentes automáticas. Inclui score financeiro gamificado, assistente de IA (“Fi”) para análise dos gastos e autenticação completa com recuperação de senha.",
@@ -82,6 +85,7 @@
   },
   "common": {
     "viewProject": "Ver Projeto",
+    "viewDetails": "Ver detalhes",
     "features": "Funcionalidades",
     "challenges": "Desafios",
     "technologies": "Tecnologias",

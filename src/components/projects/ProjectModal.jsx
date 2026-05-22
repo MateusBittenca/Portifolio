@@ -66,6 +66,17 @@ function ProjectModal({ project, isOpen, onClose }) {
         }
     }, [project, isOpen]);
 
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isOpen]);
+
     // ✅ EARLY RETURN AGORA VEM DEPOIS DOS HOOKS
     if (!isOpen || !project) return null;
 
