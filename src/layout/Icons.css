@@ -41,12 +41,10 @@
   transition: all var(--transition-base);
 }
 
-/* Cores dinâmicas para cada tecnologia no hover */
 .icons ul li:hover svg {
   color: var(--hover-color);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .icons ul {
     gap: var(--space-6);

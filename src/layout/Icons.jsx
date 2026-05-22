@@ -16,7 +16,6 @@ import {
 import { faDatabase, faFile } from "@fortawesome/free-solid-svg-icons";
 
 function Icons({ icons }) {
-    // Mapeamento dos ícones para os objetos FontAwesome
     const iconMap = {
         faHtml5: faHtml5,
         faCss3: faCss3,
@@ -48,4 +47,4 @@ function Icons({ icons }) {
     );
 }
 
-export default Icons;    
+export default Icons;
