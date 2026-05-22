@@ -41,9 +41,10 @@ function Header() {
                 <li><button onClick={() => scrollToSection('projects')}>{t('navigation.projects')}</button></li>
                 <li><button onClick={() => scrollToSection('contact')}>{t('navigation.contact')}</button></li>
               </ul>
+              <div className="header__nav-lang">
+                <FlagToggle />
+              </div>
             </nav>
-
-            <FlagToggle />
 
             <button 
               className={`header__mobile-toggle ${isMobileMenuOpen ? 'header__mobile-toggle--open' : ''}`}
