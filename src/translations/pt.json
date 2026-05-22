@@ -17,6 +17,19 @@
   "projects": {
     "title": "Projetos",
     "subtitle": "Alguns dos projetos que desenvolvi para demonstrar minhas habilidades",
+    "fi": {
+      "title": "Finanças Pessoais (Fi)",
+      "description": "Aplicação web full-stack para controle financeiro pessoal com dashboard interativo, orçamento por categoria, metas e transações recorrentes automáticas. Inclui score financeiro gamificado, assistente de IA (“Fi”) para análise dos gastos e autenticação completa com recuperação de senha.",
+      "features": [
+        "Dashboard interativo com visão consolidada das finanças",
+        "Orçamento por categoria e metas financeiras",
+        "Transações recorrentes automáticas",
+        "Score financeiro gamificado",
+        "Assistente de IA para análise dos gastos",
+        "Autenticação completa com recuperação de senha"
+      ],
+      "challenges": "Construir uma aplicação full-stack robusta com autenticação JWT, processamento de transações recorrentes, integração de IA para análise de gastos e visualizações de dados que tornem o controle financeiro intuitivo e engajador."
+    },
     "expenses": {
       "title": "Sistema de Gestão de Gastos de Obra",
       "description": "Aplicação web completa que ajuda empresas de construção civil a monitorar e controlar gastos de obra em tempo real. Dashboard interativo com relatórios detalhados, alertas de orçamento e acesso multiusuário.",

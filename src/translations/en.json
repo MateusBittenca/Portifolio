@@ -17,6 +17,19 @@
   "projects": {
     "title": "Projects",
     "subtitle": "Some of the projects I've developed to demonstrate my skills",
+    "fi": {
+      "title": "Personal Finance (Fi)",
+      "description": "Full-stack web app for personal financial control with an interactive dashboard, category budgets, goals and automatic recurring transactions. Features a gamified financial score, AI assistant (“Fi”) for spending analysis and complete authentication with password recovery.",
+      "features": [
+        "Interactive dashboard with consolidated financial overview",
+        "Category budgets and financial goals",
+        "Automatic recurring transactions",
+        "Gamified financial score",
+        "AI assistant for spending analysis",
+        "Complete authentication with password recovery"
+      ],
+      "challenges": "Build a robust full-stack application with JWT authentication, recurring transaction processing, AI integration for spending analysis and data visualizations that make financial control intuitive and engaging."
+    },
     "expenses": {
       "title": "Construction Expense Management System",
       "description": "Full-stack web app that helps construction companies track and control project expenses in real time. Features an interactive dashboard with detailed reports, budget alerts and multi-user access.",

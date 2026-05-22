@@ -3,6 +3,10 @@ import { useTranslation } from '../../hooks/useTranslation';
 import ProjectCard from '../projects/ProjectCard';
 import ProjectModal from '../projects/ProjectModal';
 import './ProjectsSection.css';
+import fiImg from '../../assets/img/projeto-financas.png';
+import fiImg2 from '../../assets/img/projeto-financas-2.png';
+import fiImg3 from '../../assets/img/projeto-financas-3.png';
+import fiImg4 from '../../assets/img/projeto-financas-4.png';
 import gastosImg2 from '../../assets/img/sistema de gastos de obra-2.png';
 import gastosImg3 from '../../assets/img/sistema de gastos de obra-3.png';
 import gastosImg from '../../assets/img/Sistema de gastos de obra.png';
@@ -17,6 +21,20 @@ function ProjectsSection() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const projects = [
+        {
+            title: t('projects.fi.title'),
+            description: t('projects.fi.description'),
+            tech: 'TypeScript, Vite, Fastify, PostgreSQL, Docker, JWT',
+            image: fiImg,
+            images: [
+                fiImg,
+                fiImg2,
+                fiImg3,
+                fiImg4
+            ],
+            features: t('projects.fi.features'),
+            challenges: t('projects.fi.challenges'),
+        },
         {
             title: t('projects.expenses.title'),
             description: t('projects.expenses.description'),
