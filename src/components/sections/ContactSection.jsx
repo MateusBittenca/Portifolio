@@ -1,13 +1,15 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { useTranslation } from '../../hooks/useTranslation';
 import './ContactSection.css';
 
 function ContactSection() {
     const { t } = useTranslation();
-    const telefone = "12 99112-5282";
     const email = "mpbittenc@gmail.com";
+    const upworkUrl = "#";
+    const linkedinUrl = "#";
 
     return (
         <section id="contact" className="contact">
@@ -29,19 +31,31 @@ function ContactSection() {
                                 <FontAwesomeIcon icon={faEnvelope} />
                             </div>
                             <div className="contact-details">
-                                <p className="contact-value">{email}</p>
+                                <a href={`mailto:${email}`} className="contact-value">{email}</a>
                                 <p className="contact-label">{t('contact.email')}</p>
                             </div>
                         </div>
-                        
-                        <div className="contact-item">
-                            <div className="contact-icon">
-                                <FontAwesomeIcon icon={faPhone} />
-                            </div>
-                            <div className="contact-details">
-                                <p className="contact-value">{telefone}</p>
-                                <p className="contact-label">{t('contact.phone')}</p>
-                            </div>
+
+                        <div className="contact__links">
+                            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                            <a
+                                href={upworkUrl}
+                                className="contact-link contact-link--primary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {t('contact.hireOnUpwork')}
+                            </a>
+                            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                            <a
+                                href={linkedinUrl}
+                                className="contact-link contact-link--secondary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faLinkedin} />
+                                {t('contact.viewLinkedIn')}
+                            </a>
                         </div>
                     </div>
                 </div>

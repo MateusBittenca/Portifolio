@@ -8,7 +8,7 @@
   "hero": {
     "profession": "FULLSTACK DEVELOPER",
     "location": "São José dos Campos, SP",
-    "description": "I'm a programmer passionate about technology, seeking my first professional experience. I have a strong desire to learn, grow, and contribute to projects that make a difference. I'm dedicated to constantly studying programming and developing practical and creative solutions."
+    "description": "I build fast, modern web applications using React, TypeScript, Node.js and Python. I focus on clean code, great UX, and delivering on time. Currently available for freelance projects — let's build something great together."
   },
   "skills": {
     "title": "Skills",
@@ -17,21 +17,9 @@
   "projects": {
     "title": "Projects",
     "subtitle": "Some of the projects I've developed to demonstrate my skills",
-    "portfolio": {
-      "title": "Professional Portfolio",
-      "description": "Personal website developed with React, showcasing projects, technical skills, and professional experience with modern and responsive design.",
-      "features": [
-        "Responsive and modern design with CSS animations",
-        "Organized sections for projects and skills",
-        "Integrated functional contact form",
-        "SEO and performance optimization",
-        "Reusable components and clean code"
-      ],
-      "challenges": "Create an attractive interface that represented my professional identity, implementing smooth animations without compromising performance, and structuring code in a modular way to facilitate future updates."
-    },
     "expenses": {
       "title": "Construction Expense Management System",
-      "description": "Complete web application for controlling and monitoring expenses in construction projects, with interactive dashboard and detailed reports.",
+      "description": "Full-stack web app that helps construction companies track and control project expenses in real time. Features an interactive dashboard with detailed reports, budget alerts and multi-user access.",
       "features": [
         "Interactive dashboard with charts and metrics",
         "Expense control by category and sector",
@@ -41,17 +29,17 @@
       ],
       "challenges": "Develop a robust system for construction financial management, implementing complex budget validations and creating intuitive data visualizations for engineers and managers."
     },
-    "TCC": {
-      "title": "Final Project (TCC)",
-      "description": "Final project developed for the technical computer science course, with the objective of evaluating the knowledge acquired during the course.",
+    "unifit": {
+      "title": "UNIFIT",
+      "description": "Landing page for a gym focused on conversion. Built with performance and mobile-first design in mind, featuring smooth animations and a clear call-to-action flow.",
       "features": [
-        "Implementation of a physical activity, training and health control system",
-        "User system with permissions",
-        "Responsive interface for mobile and desktop",
-        "SEO and performance optimization",
-        "Visualization of correct exercises for the user"
+        "Mobile-first responsive layout",
+        "Smooth CSS animations and transitions",
+        "Clear call-to-action flow for lead conversion",
+        "Performance-optimized assets and loading",
+        "Modern visual design tailored for fitness brands"
       ],
-      "challenges": "Develop a robust system for physical activity, training and health management, implementing complex exercise validations and creating intuitive data visualizations for users."
+      "challenges": "Balance visual impact with fast load times on mobile, and design a conversion-focused layout that guides visitors toward membership sign-up."
     }
   },
   "contact": {
@@ -60,7 +48,8 @@
     "callToAction": "Let's talk!",
     "description": "I'm always open to new opportunities and collaborations. If you have a project in mind or would like to discuss possibilities, don't hesitate to get in touch.",
     "email": "Email",
-    "phone": "Phone"
+    "hireOnUpwork": "Hire me on Upwork",
+    "viewLinkedIn": "View on LinkedIn"
   },
   "footer": {
     "copyright": "All rights reserved."

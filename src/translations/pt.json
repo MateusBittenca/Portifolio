@@ -8,7 +8,7 @@
   "hero": {
     "profession": "FULLSTACK DEVELOPER",
     "location": "São José dos Campos, SP",
-    "description": "Sou um programador apaixonado por tecnologia, em busca da minha primeira experiência profissional. Tenho muita vontade de aprender, crescer e contribuir para projetos que façam a diferença. Dedico-me ao estudo constante de programação e desenvolvimento de soluções práticas e criativas."
+    "description": "Desenvolvo aplicações web modernas e performáticas com React, TypeScript, Node.js e Python. Foco em código limpo, boa experiência do usuário e entrega dentro do prazo. Disponível para projetos freelance — vamos construir algo incrível juntos."
   },
   "skills": {
     "title": "Habilidades",
@@ -17,21 +17,9 @@
   "projects": {
     "title": "Projetos",
     "subtitle": "Alguns dos projetos que desenvolvi para demonstrar minhas habilidades",
-    "portfolio": {
-      "title": "Portfólio Profissional",
-      "description": "Website pessoal desenvolvido com React, apresentando projetos, habilidades técnicas e experiência profissional com design moderno e responsivo.",
-      "features": [
-        "Design responsivo e moderno com animações CSS",
-        "Seções organizadas para projetos e habilidades",
-        "Formulário de contato funcional integrado",
-        "Otimização para SEO e performance",
-        "Componentes reutilizáveis e código limpo"
-      ],
-      "challenges": "Criar uma interface atrativa que representasse minha identidade profissional, implementando animações suaves sem comprometer a performance, e estruturar o código de forma modular para facilitar futuras atualizações."
-    },
     "expenses": {
       "title": "Sistema de Gestão de Gastos de Obra",
-      "description": "Aplicação web completa para controle e monitoramento de gastos em projetos de construção civil, com dashboard interativo e relatórios detalhados.",
+      "description": "Aplicação web completa que ajuda empresas de construção civil a monitorar e controlar gastos de obra em tempo real. Dashboard interativo com relatórios detalhados, alertas de orçamento e acesso multiusuário.",
       "features": [
         "Dashboard interativo com gráficos e métricas",
         "Controle de gastos por categoria e setor",
@@ -41,17 +29,17 @@
       ],
       "challenges": "Desenvolver um sistema robusto para gestão financeira de obras, implementando validações complexas de orçamentos e criando visualizações de dados intuitivas para engenheiros e gestores."
     },
-    "TCC": {
-      "title": "TCC",
-      "description": "TCC desenvolvido para a o curso técnico em informática, com objetivo de avaliar o conhecimento adquirido durante o curso.",
+    "unifit": {
+      "title": "UNIFIT",
+      "description": "Landing page para academia focada em conversão. Desenvolvida com performance e design mobile-first, animações suaves e fluxo de CTA claro.",
       "features": [
-        "Implementação de um sistema de controle de atividade física,treinos e saúde",
-        "Sistema de usuários com permissões",
-        "Interface responsiva para mobile e desktop",
-        "Otimização para SEO e performance",
-        "Visualização de exercícios corretos para o usuário"
+        "Layout responsivo com abordagem mobile-first",
+        "Animações e transições CSS suaves",
+        "Fluxo de call-to-action focado em conversão de leads",
+        "Assets e carregamento otimizados para performance",
+        "Design visual moderno voltado para marcas fitness"
       ],
-      "challenges": "Desenvolver um sistema robusto para gestão de atividade física, treinos e saúde, implementando validações complexas de exercícios e criando visualizações de dados intuitivas para usuários."
+      "challenges": "Equilibrar impacto visual com carregamento rápido no mobile, e projetar um layout focado em conversão que guie visitantes até a inscrição."
     }
   },
   "contact": {
@@ -60,7 +48,8 @@
     "callToAction": "Vamos conversar!",
     "description": "Estou sempre aberto a novas oportunidades e colaborações. Se você tem um projeto em mente ou gostaria de discutir possibilidades, não hesite em entrar em contato.",
     "email": "Email",
-    "phone": "Telefone"
+    "hireOnUpwork": "Contrate-me no Upwork",
+    "viewLinkedIn": "Ver no LinkedIn"
   },
   "footer": {
     "copyright": "Todos os direitos reservados."

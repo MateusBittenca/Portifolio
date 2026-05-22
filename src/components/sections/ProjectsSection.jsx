@@ -3,9 +3,6 @@ import { useTranslation } from '../../hooks/useTranslation';
 import ProjectCard from '../projects/ProjectCard';
 import ProjectModal from '../projects/ProjectModal';
 import './ProjectsSection.css';
-import portifolioImg from '../../assets/img/portifolio.png';
-import portifolioImg2 from '../../assets/img/portifolio-2.png';
-import portifolioImg3 from '../../assets/img/portifolio-3.png';
 import gastosImg2 from '../../assets/img/sistema de gastos de obra-2.png';
 import gastosImg3 from '../../assets/img/sistema de gastos de obra-3.png';
 import gastosImg from '../../assets/img/Sistema de gastos de obra.png';
@@ -20,52 +17,35 @@ function ProjectsSection() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const projects = [
-        { 
-            title: t('projects.portfolio.title'),
-            description: t('projects.portfolio.description'),
-            tech: 'React, CSS3, JavaScript, HTML5',
-            image: portifolioImg, // Imagem principal (compatibilidade)
-            images: [
-                portifolioImg, 
-                portifolioImg2,
-                portifolioImg3
-            ], // Galeria de imagens
-            features: t('projects.portfolio.features'),
-            challenges: t('projects.portfolio.challenges'),
-            github: 'https://github.com/MateusBittenca/Portifolio',
-            demo: 'https://meu-portfolio.vercel.app'
-        },
         {
             title: t('projects.expenses.title'),
             description: t('projects.expenses.description'),
-            tech: 'Python, MySQL, Tailwind CSS , FastAPI',
-            image: gastosImg, // Imagem principal (compatibilidade)
+            tech: 'Python, MySQL, Tailwind CSS, Chart.js',
+            image: gastosImg,
             images: [
                 gastosImg,
                 gastosImg2,
                 gastosImg3
-            ], // Galeria de imagens
+            ],
             features: t('projects.expenses.features'),
             challenges: t('projects.expenses.challenges'),
             github: 'https://github.com/MateusBittenca/Or-amentos-sistema',
             demo: 'https://sistema-gastos-obra.vercel.app'
         },
         {
-            title: t('projects.TCC.title'),
-            description: t('projects.TCC.description'),
-            tech: 'JavaScript, Node.js, MySQL, Tailwind CSS',
-            image: tccImg, // Imagem principal (compatibilidade)
+            title: t('projects.unifit.title'),
+            description: t('projects.unifit.description'),
+            tech: 'JavaScript, Node.js, MySQL',
+            image: tccImg,
             images: [
                 tccImg,
                 tccImg2,
                 tccImg3
-            ], // Galeria de imagens
-            features: t('projects.TCC.features'),
-            challenges: t('projects.TCC.challenges'),
+            ],
+            features: t('projects.unifit.features'),
+            challenges: t('projects.unifit.challenges'),
             github: 'https://github.com/MateusBittenca/TCC',
-            
         }
-        
     ];
 
     const handleProjectClick = (project) => {
