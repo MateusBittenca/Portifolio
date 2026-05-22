@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from '../hooks/useTranslation';
-import MinimalLanguageToggle from '../components/common/MinimalLanguageToggle';
+import FlagToggle from '../components/common/FlagToggle';
 import "./Header.css";
 
 function Header() {
@@ -43,7 +43,7 @@ function Header() {
               </ul>
             </nav>
 
-            <MinimalLanguageToggle />
+            <FlagToggle />
 
             <button 
               className={`header__mobile-toggle ${isMobileMenuOpen ? 'header__mobile-toggle--open' : ''}`}

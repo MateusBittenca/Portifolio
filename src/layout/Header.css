@@ -154,8 +154,8 @@
     display: flex;
   }
 
-  /* Language toggle no mobile fica visível ao lado do menu */
-  .language-toggle {
+  /* Seletor de idioma no mobile fica visível ao lado do menu */
+  .flag-toggle {
     position: relative;
     z-index: 1001;
   }

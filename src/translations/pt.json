@@ -53,6 +53,19 @@
         "Design visual moderno voltado para marcas fitness"
       ],
       "challenges": "Equilibrar impacto visual com carregamento rápido no mobile, e projetar um layout focado em conversão que guie visitantes até a inscrição."
+    },
+    "consultoria": {
+      "title": "Consultoria Imobiliária",
+      "description": "Landing page premium para consultoria imobiliária de luxo, com hero imersivo, catálogo de imóveis em carrossel interativo, modais de galeria e serviços especializados. Design elegante com tipografia serifada, navegação mobile completa e formulário de contato com validação.",
+      "features": [
+        "Hero full-screen com métricas animadas e CTAs",
+        "Carrossel de imóveis com galeria modal e navegação por teclado",
+        "Seção de serviços com modais informativos",
+        "Formulário de contato e newsletter com feedback em toast",
+        "Menu mobile responsivo com acessibilidade (ARIA)",
+        "Scroll suave e animações de contadores no viewport"
+      ],
+      "challenges": "Criar uma experiência visual premium em HTML, CSS e JavaScript puro, com carrosséis acessíveis, modais de galeria com múltiplas imagens e interações fluidas no mobile — mantendo performance e identidade visual sofisticada para o segmento de luxo."
     }
   },
   "contact": {

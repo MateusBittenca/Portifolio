@@ -53,6 +53,19 @@
         "Modern visual design tailored for fitness brands"
       ],
       "challenges": "Balance visual impact with fast load times on mobile, and design a conversion-focused layout that guides visitors toward membership sign-up."
+    },
+    "consultoria": {
+      "title": "Real Estate Consultancy",
+      "description": "Premium landing page for a luxury real estate consultancy, featuring an immersive hero, interactive property carousel, gallery modals and specialized services. Elegant design with serif typography, full mobile navigation and a validated contact form.",
+      "features": [
+        "Full-screen hero with animated metrics and CTAs",
+        "Property carousel with modal gallery and keyboard navigation",
+        "Services section with informative modals",
+        "Contact form and newsletter with toast feedback",
+        "Responsive mobile menu with accessibility (ARIA)",
+        "Smooth scroll and viewport counter animations"
+      ],
+      "challenges": "Build a premium visual experience with plain HTML, CSS and JavaScript, including accessible carousels, multi-image gallery modals and fluid mobile interactions — while maintaining performance and a sophisticated identity for the luxury segment."
     }
   },
   "contact": {

@@ -13,6 +13,11 @@ import gastosImg from '../../assets/img/Sistema de gastos de obra.png';
 import tccImg from '../../assets/img/TCC.png';
 import tccImg2 from '../../assets/img/TCC-2.png';
 import tccImg3 from '../../assets/img/TCC-3.png';
+import imoveisImg from '../../assets/img/Imoveis.png';
+import imoveisImg2 from '../../assets/img/Imvoeis2.png';
+import imoveisImg3 from '../../assets/img/Imoveis3.png';
+import imoveisImg4 from '../../assets/img/Imoveis4.png';
+import imoveisImg5 from '../../assets/img/imoveis5.png';
 
 
 function ProjectsSection() {
@@ -63,6 +68,22 @@ function ProjectsSection() {
             features: t('projects.unifit.features'),
             challenges: t('projects.unifit.challenges'),
             github: 'https://github.com/MateusBittenca/TCC',
+        },
+        {
+            title: t('projects.consultoria.title'),
+            description: t('projects.consultoria.description'),
+            tech: 'HTML, Tailwind CSS, JavaScript, Material Symbols',
+            image: imoveisImg,
+            images: [
+                imoveisImg,
+                imoveisImg2,
+                imoveisImg3,
+                imoveisImg4,
+                imoveisImg5
+            ],
+            features: t('projects.consultoria.features'),
+            challenges: t('projects.consultoria.challenges'),
+            github: 'https://github.com/MateusBittenca/Consultoria-imoveis',
         }
     ];
 
