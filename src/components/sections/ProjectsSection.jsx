@@ -52,7 +52,7 @@ function ProjectsSection() {
             features: t('projects.aprendaAqui.features'),
             challenges: t('projects.aprendaAqui.challenges'),
             github: 'https://github.com/MateusBittenca/Aprenda-Aqui-v2',
-            demo: 'https://aprenda-web-production.up.railway.app',
+            demo: 'https://aprendaaqui.up.railway.app',
             featured: true,
             featuredBadge: t('projects.featuredBadge'),
             accentColor: '#22c55e'
