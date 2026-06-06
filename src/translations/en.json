@@ -20,6 +20,20 @@
     "scrollHint": "Drag to see more projects",
     "prevProject": "Previous project",
     "nextProject": "Next project",
+    "aprendaAqui": {
+      "title": "Aprenda Aqui!",
+      "description": "Gamified education platform for learning programming (HTML, CSS and JavaScript), inspired by Duolingo. Features interactive tracks, quiz and code lessons, integrated editor, XP and level system, leaderboard, virtual store, daily rewards and a full teacher panel for content creation.",
+      "features": [
+        "Learning tracks with Duolingo-style visual path",
+        "Interactive quiz and code lessons with integrated editor",
+        "Gamification with XP, levels, streak and league-based ranking",
+        "Virtual store with gems, power-ups and editor themes",
+        "Reward chests, daily rewards and lives system",
+        "Teacher panel to create tracks, units and lessons",
+        "Community with friends, activity feed and notifications"
+      ],
+      "challenges": "Architect a full-stack monorepo with Next.js and Express API, implement a complete gamification system (XP, streak, levels, gems, store) and build a teacher panel with dynamic track CRUD — while keeping a fluid, engaging Duolingo-style experience."
+    },
     "fi": {
       "title": "Personal Finance (Fi)",
       "description": "Full-stack web app for personal financial control with an interactive dashboard, category budgets, goals and automatic recurring transactions. Features a gamified financial score, AI assistant (“Fi”) for spending analysis and complete authentication with password recovery.",

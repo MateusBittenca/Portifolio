@@ -18,6 +18,11 @@ import imoveisImg2 from '../../assets/img/Imvoeis2.png';
 import imoveisImg3 from '../../assets/img/Imoveis3.png';
 import imoveisImg4 from '../../assets/img/Imoveis4.png';
 import imoveisImg5 from '../../assets/img/imoveis5.png';
+import aprendaImg from '../../assets/img/Aprenda aqui.png';
+import aprendaImg2 from '../../assets/img/Aprenda aqui2.png';
+import aprendaImg3 from '../../assets/img/Aprenda aqui3.png';
+import aprendaImg4 from '../../assets/img/Aprenda aqui4.png';
+import aprendaImg5 from '../../assets/img/Aprenda aqui5.png';
 
 
 function ProjectsSection() {
@@ -30,6 +35,23 @@ function ProjectsSection() {
     const gridRef = useRef(null);
 
     const projects = [
+        {
+            title: t('projects.aprendaAqui.title'),
+            description: t('projects.aprendaAqui.description'),
+            tech: 'Next.js, TypeScript, Express, Prisma, MySQL, NextAuth.js',
+            image: aprendaImg,
+            images: [
+                aprendaImg,
+                aprendaImg2,
+                aprendaImg3,
+                aprendaImg4,
+                aprendaImg5
+            ],
+            features: t('projects.aprendaAqui.features'),
+            challenges: t('projects.aprendaAqui.challenges'),
+            github: 'https://github.com/MateusBittenca/Aprenda-Aqui-v2',
+            demo: 'https://aprenda-web-production.up.railway.app'
+        },
         {
             title: t('projects.fi.title'),
             description: t('projects.fi.description'),
