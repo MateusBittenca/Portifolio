@@ -3,21 +3,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { useTranslation } from '../../hooks/useTranslation';
+import SectionHeader from '../common/SectionHeader';
 import './ContactSection.css';
 
 function ContactSection() {
     const { t } = useTranslation();
     const email = "mpbittenc@gmail.com";
     const upworkUrl = "#";
-    const linkedinUrl = "#";
+    const linkedinUrl = "https://www.linkedin.com/in/mateus-ribeiro-leite-paes-bittencourt-60730a294";
 
     return (
         <section id="contact" className="contact">
             <div className="container">
-                <div className="section-header">
-                    <h2>{t('contact.title')}</h2>
-                    <p>{t('contact.subtitle')}</p>
-                </div>
+                <SectionHeader title={t('contact.title')} subtitle={t('contact.subtitle')} />
                 
                 <div className="contact__content">
                     <div className="contact__text">

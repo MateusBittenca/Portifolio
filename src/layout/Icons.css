@@ -35,13 +35,21 @@
   border-color: var(--primary-200);
 }
 
-.icons ul li svg {
+.icons ul li svg,
+.icons ul li .icons__custom {
   font-size: var(--font-size-3xl);
   color: var(--gray-500);
   transition: all var(--transition-base);
 }
 
-.icons ul li:hover svg {
+.icons ul li .icons__custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icons ul li:hover svg,
+.icons ul li:hover .icons__custom {
   color: var(--hover-color);
 }
 

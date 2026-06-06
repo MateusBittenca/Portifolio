@@ -69,6 +69,7 @@
 .projects__grid .project-card:nth-child(2) { animation-delay: 0.2s; }
 .projects__grid .project-card:nth-child(3) { animation-delay: 0.3s; }
 .projects__grid .project-card:nth-child(4) { animation-delay: 0.4s; }
+.projects__grid .project-card:nth-child(5) { animation-delay: 0.5s; }
 
 @keyframes fadeInUp {
   from {
@@ -194,5 +195,14 @@
     min-width: 260px;
     max-width: 260px;
     width: 260px;
+  }
+
+  .projects__dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .projects__dot--active {
+    width: 28px;
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from '../../hooks/useTranslation';
+import SectionHeader from '../common/SectionHeader';
 import Icons from '../../layout/Icons.jsx';
 import './SkillsSection.css';
 
@@ -9,7 +10,9 @@ function SkillsSection() {
         { icon: 'faHtml5', name: 'HTML5', color: '#E34F26' },
         { icon: 'faCss3', name: 'CSS3', color: '#1572B6' },
         { icon: 'faJs', name: 'JavaScript', color: '#F7DF1E' },
+        { icon: 'faTypeScript', name: 'TypeScript', color: '#3178C6' },
         { icon: 'faReact', name: 'React', color: '#61DAFB' },
+        { icon: 'faTailwind', name: 'Tailwind CSS', color: '#06B6D4' },
         { icon: 'faPhp', name: 'PHP', color: '#777BB4' },
         { icon: 'faPython', name: 'Python', color: '#3776AB' },
         { icon: 'faGitAlt', name: 'Git', color: '#F05032' },
@@ -22,10 +25,7 @@ function SkillsSection() {
     return (
         <section id="skills" className="skills">
             <div className="container">
-                <div className="section-header">
-                    <h2>{t('skills.title')}</h2>
-                    <p>{t('skills.subtitle')}</p>
-                </div>
+                <SectionHeader title={t('skills.title')} subtitle={t('skills.subtitle')} />
                 
                 <div className="skills__icons">
                     <Icons icons={skillsIcons} />

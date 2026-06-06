@@ -20,9 +20,11 @@
     "scrollHint": "Arraste para ver mais projetos",
     "prevProject": "Projeto anterior",
     "nextProject": "Próximo projeto",
+    "featuredBadge": "Destaque",
     "aprendaAqui": {
       "title": "Aprenda Aqui!",
-      "description": "Plataforma de educação gamificada para aprender programação (HTML, CSS e JavaScript), inspirada no Duolingo. Inclui trilhas interativas, lições de quiz e código, editor integrado, sistema de XP e níveis, ranking, loja virtual, recompensas diárias e painel completo para professores criarem conteúdo.",
+      "description": "Plataforma educacional gamificada para ensinar programação web (HTML, CSS e JavaScript), inspirada no Duolingo — com trilhas visuais, lições interativas, gamificação completa e painel para professores.",
+      "tech": "Next.js, TypeScript, Express, Prisma, MySQL, NextAuth.js",
       "features": [
         "Trilhas de aprendizado com caminho visual estilo Duolingo",
         "Lições interativas de quiz e código com editor integrado",
@@ -32,7 +34,7 @@
         "Painel do professor para criar trilhas, unidades e lições",
         "Comunidade com amigos, feed de atividades e notificações"
       ],
-      "challenges": "Arquitetar um monorepo full-stack com Next.js e API Express, implementar um sistema de gamificação completo (XP, streak, levels, gems, store) e construir um painel de professor com CRUD dinâmico de trilhas — mantendo uma experiência fluida e engajadora no estilo Duolingo."
+      "challenges": "Arquitetar monorepo full-stack (Next.js + Express + Prisma), modelar gamificação relacional (XP, streak, gems, store), implementar editor de código em lições interativas e painel de professor com CRUD dinâmico — mantendo UX fluida e engajamento estilo Duolingo."
     },
     "fi": {
       "title": "Finanças Pessoais (Fi)",

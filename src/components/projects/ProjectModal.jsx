@@ -112,12 +112,16 @@ function ProjectModal({ project, isOpen, onClose }) {
 
     const techList = project.tech.split(', ');
     const hasLinks = project.github || project.demo;
+    const accentStyle = project.accentColor
+        ? { '--project-accent': project.accentColor }
+        : undefined;
 
     return (
         <div className="project-modal-overlay" onClick={onClose}>
             <div
                 ref={modalRef}
-                className="project-modal"
+                className={`project-modal${project.accentColor ? ' project-modal--accent' : ''}`}
+                style={accentStyle}
                 role="dialog"
                 aria-modal="true"
                 aria-labelledby="project-modal-title"

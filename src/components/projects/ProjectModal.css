@@ -286,6 +286,17 @@
   box-shadow: var(--shadow-md);
 }
 
+.project-modal--accent .project-modal__link--demo {
+  background: var(--project-accent);
+  border-color: var(--project-accent);
+}
+
+.project-modal--accent .project-modal__link--demo:hover {
+  background: var(--project-accent);
+  border-color: var(--project-accent);
+  filter: brightness(0.9);
+}
+
 .project-modal__link--github {
   background: var(--white);
   color: var(--gray-700);

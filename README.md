@@ -13,7 +13,7 @@ Um portfólio moderno e responsivo desenvolvido com React, destacando habilidade
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Frontend**: React 19, CSS3, JavaScript (ES6+)
+- **Frontend**: React 18.3, CSS3, JavaScript (ES6+)
 - **Estilização**: CSS Custom Properties, Flexbox, Grid
 - **Ícones**: Font Awesome
 - **Responsividade**: Media Queries CSS
@@ -23,7 +23,7 @@ Um portfólio moderno e responsivo desenvolvido com React, destacando habilidade
 
 ### Cores
 - **Primárias**: Tons de azul (#3b82f6, #2563eb)
-- **Acentos**: Tons de roxo (#d946ef, #c026d3)
+- **Acentos**: Tons de roxo (#8b5cf6, #7c3aed)
 - **Neutras**: Escala de cinzas (#f9fafb a #111827)
 
 ### Tipografia
@@ -86,7 +86,7 @@ src/
 │   ├── Icons.js              # Componente de ícones
 │   └── Icons.css             # Estilos dos ícones
 ├── assets/
-│   └── img/                  # Imagens do projeto
+│   └── img/                  # Imagens do projeto (screenshots em 16:10, ex.: 1280×800)
 ├── App.js                    # Componente principal
 ├── index.js                  # Ponto de entrada
 └── index.css                 # Estilos globais e variáveis
@@ -114,7 +114,7 @@ Edite as variáveis CSS em `src/index.css`:
 ```css
 :root {
   --primary-500: #3b82f6;    /* Cor principal */
-  --accent-500: #d946ef;     /* Cor de destaque */
+  --accent-500: #8b5cf6;     /* Cor de destaque */
   /* ... outras variáveis */
 }
 ```

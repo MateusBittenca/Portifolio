@@ -1,5 +1,6 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { useTranslation } from '../../hooks/useTranslation';
+import SectionHeader from '../common/SectionHeader';
 import ProjectCard from '../projects/ProjectCard';
 import ProjectModal from '../projects/ProjectModal';
 import './ProjectsSection.css';
@@ -18,11 +19,11 @@ import imoveisImg2 from '../../assets/img/Imvoeis2.png';
 import imoveisImg3 from '../../assets/img/Imoveis3.png';
 import imoveisImg4 from '../../assets/img/Imoveis4.png';
 import imoveisImg5 from '../../assets/img/imoveis5.png';
-import aprendaImg from '../../assets/img/Aprenda aqui.png';
-import aprendaImg2 from '../../assets/img/Aprenda aqui2.png';
-import aprendaImg3 from '../../assets/img/Aprenda aqui3.png';
-import aprendaImg4 from '../../assets/img/Aprenda aqui4.png';
-import aprendaImg5 from '../../assets/img/Aprenda aqui5.png';
+import aprendaImg from '../../assets/img/aprenda-aqui-1.png';
+import aprendaImg2 from '../../assets/img/aprenda-aqui-2.png';
+import aprendaImg3 from '../../assets/img/aprenda-aqui-3.png';
+import aprendaImg4 from '../../assets/img/aprenda-aqui-4.png';
+import aprendaImg5 from '../../assets/img/aprenda-aqui-5.png';
 
 
 function ProjectsSection() {
@@ -36,9 +37,10 @@ function ProjectsSection() {
 
     const projects = [
         {
+            id: 'aprenda-aqui',
             title: t('projects.aprendaAqui.title'),
             description: t('projects.aprendaAqui.description'),
-            tech: 'Next.js, TypeScript, Express, Prisma, MySQL, NextAuth.js',
+            tech: t('projects.aprendaAqui.tech'),
             image: aprendaImg,
             images: [
                 aprendaImg,
@@ -50,9 +52,13 @@ function ProjectsSection() {
             features: t('projects.aprendaAqui.features'),
             challenges: t('projects.aprendaAqui.challenges'),
             github: 'https://github.com/MateusBittenca/Aprenda-Aqui-v2',
-            demo: 'https://aprenda-web-production.up.railway.app'
+            demo: 'https://aprenda-web-production.up.railway.app',
+            featured: true,
+            featuredBadge: t('projects.featuredBadge'),
+            accentColor: '#22c55e'
         },
         {
+            id: 'fi',
             title: t('projects.fi.title'),
             description: t('projects.fi.description'),
             tech: 'TypeScript, Vite, Fastify, PostgreSQL, Docker, JWT',
@@ -67,6 +73,7 @@ function ProjectsSection() {
             challenges: t('projects.fi.challenges'),
         },
         {
+            id: 'expenses',
             title: t('projects.expenses.title'),
             description: t('projects.expenses.description'),
             tech: 'Python, MySQL, Tailwind CSS, Chart.js',
@@ -82,6 +89,7 @@ function ProjectsSection() {
             demo: 'https://sistema-gastos-obra.vercel.app'
         },
         {
+            id: 'unifit',
             title: t('projects.unifit.title'),
             description: t('projects.unifit.description'),
             tech: 'JavaScript, Node.js, MySQL',
@@ -96,6 +104,7 @@ function ProjectsSection() {
             github: 'https://github.com/MateusBittenca/TCC',
         },
         {
+            id: 'consultoria',
             title: t('projects.consultoria.title'),
             description: t('projects.consultoria.description'),
             tech: 'HTML, Tailwind CSS, JavaScript, Material Symbols',
@@ -191,10 +200,7 @@ function ProjectsSection() {
     return (
         <section id="projects" className="projects">
             <div className="container">
-                <div className="section-header">
-                    <h2>{t('projects.title')}</h2>
-                    <p>{t('projects.subtitle')}</p>
-                </div>
+                <SectionHeader title={t('projects.title')} subtitle={t('projects.subtitle')} />
             </div>
 
             <div className="projects__carousel">
@@ -215,7 +221,7 @@ function ProjectsSection() {
                 <div className="projects__grid" ref={gridRef}>
                     {projects.map((project, index) => (
                         <ProjectCard
-                            key={index}
+                            key={project.id}
                             project={project}
                             index={index}
                             onClick={handleProjectClick}
