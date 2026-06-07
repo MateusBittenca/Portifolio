@@ -1,4 +1,5 @@
 import "./Icons.css";
+import { motion, useReducedMotion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
     faHtml5, 
@@ -14,6 +15,33 @@ import {
     
 } from "@fortawesome/free-brands-svg-icons";
 import { faDatabase, faFile } from "@fortawesome/free-solid-svg-icons";
+
+const containerVariants = {
+    hidden: {},
+    visible: {
+        transition: {
+            staggerChildren: 0.06,
+            delayChildren: 0.1
+        }
+    }
+};
+
+const itemVariants = {
+    hidden: {
+        opacity: 0,
+        y: 24,
+        scale: 0.9
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        transition: {
+            duration: 0.4,
+            ease: [0.25, 0.46, 0.45, 0.94]
+        }
+    }
+};
 
 function TypeScriptIcon() {
     return (
@@ -31,7 +59,9 @@ function TailwindIcon() {
     );
 }
 
-function Icons({ icons }) {
+function Icons({ icons, animated = true }) {
+    const shouldReduceMotion = useReducedMotion();
+
     const iconMap = {
         faHtml5: faHtml5,
         faCss3: faCss3,
@@ -52,31 +82,68 @@ function Icons({ icons }) {
         faTailwind: TailwindIcon
     };
 
+    const hoverAnimation = shouldReduceMotion
+        ? undefined
+        : { y: -8, scale: 1.05 };
+
+    const tapAnimation = shouldReduceMotion
+        ? undefined
+        : { scale: 0.97 };
+
+    const listContent = icons.map((skill) => {
+        const CustomIcon = customIconMap[skill.icon];
+        const ItemTag = animated ? motion.li : 'li';
+
+        const itemProps = animated
+            ? {
+                variants: itemVariants,
+                whileHover: hoverAnimation,
+                whileTap: tapAnimation,
+                transition: { type: 'spring', stiffness: 400, damping: 22 }
+            }
+            : {};
+
+        return (
+            <ItemTag
+                key={skill.name}
+                title={skill.name}
+                {...itemProps}
+            >
+                {CustomIcon ? (
+                    <span
+                        className="icons__custom"
+                        style={{ '--hover-color': skill.color }}
+                    >
+                        <CustomIcon />
+                    </span>
+                ) : (
+                    <FontAwesomeIcon 
+                        icon={iconMap[skill.icon]} 
+                        style={{ '--hover-color': skill.color }}
+                    />
+                )}
+            </ItemTag>
+        );
+    });
+
+    if (!animated) {
+        return (
+            <div className="icons">
+                <ul>{listContent}</ul>
+            </div>
+        );
+    }
+
     return (
         <div className="icons">
-            <ul>
-                {icons.map((skill, index) => {
-                    const CustomIcon = customIconMap[skill.icon];
-
-                    return (
-                        <li key={index} title={skill.name}>
-                            {CustomIcon ? (
-                                <span
-                                    className="icons__custom"
-                                    style={{ '--hover-color': skill.color }}
-                                >
-                                    <CustomIcon />
-                                </span>
-                            ) : (
-                                <FontAwesomeIcon 
-                                    icon={iconMap[skill.icon]} 
-                                    style={{ '--hover-color': skill.color }}
-                                />
-                            )}
-                        </li>
-                    );
-                })}
-            </ul>
+            <motion.ul
+                variants={containerVariants}
+                initial={shouldReduceMotion ? false : 'hidden'}
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.15 }}
+            >
+                {listContent}
+            </motion.ul>
         </div>
     );
 }

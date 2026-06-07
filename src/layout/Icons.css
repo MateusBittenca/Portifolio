@@ -30,7 +30,6 @@
 }
 
 .icons ul li:hover {
-  transform: translateY(-8px) scale(1.05);
   box-shadow: var(--shadow-xl);
   border-color: var(--primary-200);
 }
