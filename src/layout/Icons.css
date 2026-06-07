@@ -21,16 +21,16 @@
   justify-content: center;
   width: 80px;
   height: 80px;
-  background: var(--white);
+  background: var(--color-surface-raised);
   border-radius: var(--radius-2xl);
   box-shadow: var(--shadow-md);
-  transition: all var(--transition-base);
+  transition: box-shadow var(--transition-base), border-color var(--transition-base);
   cursor: default;
-  border: 2px solid var(--gray-100);
+  border: 2px solid var(--color-border);
 }
 
 .icons ul li:hover {
-  box-shadow: var(--shadow-xl);
+  box-shadow: var(--shadow-lg);
   border-color: var(--primary-200);
 }
 
@@ -38,7 +38,7 @@
 .icons ul li .icons__custom {
   font-size: var(--font-size-3xl);
   color: var(--gray-500);
-  transition: all var(--transition-base);
+  transition: color var(--transition-base);
 }
 
 .icons ul li .icons__custom {
@@ -56,12 +56,12 @@
   .icons ul {
     gap: var(--space-6);
   }
-  
+
   .icons ul li {
     width: 70px;
     height: 70px;
   }
-  
+
   .icons ul li svg {
     font-size: var(--font-size-2xl);
   }
@@ -71,12 +71,12 @@
   .icons ul {
     gap: var(--space-4);
   }
-  
+
   .icons ul li {
     width: 60px;
     height: 60px;
   }
-  
+
   .icons ul li svg {
     font-size: var(--font-size-xl);
   }

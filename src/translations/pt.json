@@ -6,13 +6,24 @@
     "contact": "Contato"
   },
   "hero": {
-    "profession": "FULLSTACK DEVELOPER",
+    "profession": "Desenvolvedor Fullstack",
+    "subtitle": "React, TypeScript, Node.js e Python",
     "location": "São José dos Campos, SP",
-    "description": "Desenvolvo aplicações web modernas e performáticas com React, TypeScript, Node.js e Python. Foco em código limpo, boa experiência do usuário e entrega dentro do prazo. Disponível para projetos freelance — vamos construir algo incrível juntos."
+    "description": "Construo aplicações web modernas e performáticas com foco em código limpo, boa experiência do usuário e entrega dentro do prazo.",
+    "projectsCount": "5+ projetos",
+    "freelanceAvailable": "Disponível para freelance",
+    "proofLabel": "Destaques",
+    "stacksLabel": "Principais tecnologias"
   },
   "skills": {
     "title": "Habilidades",
-    "subtitle": "Tecnologias e ferramentas que utilizo no desenvolvimento"
+    "subtitle": "Tecnologias e ferramentas que utilizo no desenvolvimento",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "devops": "DevOps",
+      "tools": "Ferramentas"
+    }
   },
   "projects": {
     "title": "Projetos",
@@ -93,11 +104,13 @@
     "callToAction": "Vamos conversar!",
     "description": "Estou sempre aberto a novas oportunidades e colaborações. Se você tem um projeto em mente ou gostaria de discutir possibilidades, não hesite em entrar em contato.",
     "email": "Email",
-    "hireOnUpwork": "Contrate-me no Upwork",
-    "viewLinkedIn": "Ver no LinkedIn"
+    "viewLinkedIn": "Ver no LinkedIn",
+    "copyEmail": "Copiar email",
+    "copySuccess": "Email copiado!"
   },
   "footer": {
-    "copyright": "Todos os direitos reservados."
+    "copyright": "Todos os direitos reservados.",
+    "backToTop": "Voltar ao topo"
   },
   "common": {
     "viewProject": "Ver Projeto",

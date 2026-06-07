@@ -4,14 +4,14 @@
   --card-title-height: 2.75rem;
   --card-description-height: 2.75rem;
   --card-tech-height: 3.5rem;
-  --card-accent: var(--primary-500);
+  --card-accent: var(--color-accent);
 
-  background: var(--white);
-  border-radius: var(--radius-2xl);
+  background: var(--color-surface-raised);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-md);
+  box-shadow: none;
   transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
-  border: 1px solid var(--gray-200);
+  border: 1px solid var(--color-border);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -20,24 +20,23 @@
 
 .project-card:hover,
 .project-card:focus-visible {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
-  border-color: var(--primary-200);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-strong);
   outline: none;
 }
 
 .project-card:focus-visible {
-  box-shadow: var(--shadow-xl), 0 0 0 3px var(--primary-200);
+  box-shadow: var(--shadow-md), 0 0 0 2px var(--color-accent);
 }
 
 .project-card--featured:hover,
 .project-card--featured:focus-visible {
   border-color: var(--card-accent);
-  box-shadow: var(--shadow-xl), 0 0 0 1px var(--card-accent);
 }
 
 .project-card--featured:focus-visible {
-  box-shadow: var(--shadow-xl), 0 0 0 3px color-mix(in srgb, var(--card-accent) 35%, transparent);
+  box-shadow: var(--shadow-md), 0 0 0 2px var(--card-accent);
 }
 
 .project-card__image {
@@ -45,7 +44,7 @@
   width: 100%;
   height: var(--card-image-height);
   overflow: hidden;
-  background: var(--gray-100);
+  background: var(--color-surface-alt);
   flex-shrink: 0;
 }
 
@@ -58,7 +57,7 @@
 }
 
 .project-card:hover .project-card__image img {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 
 .project-card__badge {
@@ -70,11 +69,10 @@
   color: var(--white);
   background: var(--card-accent);
   padding: var(--space-1) var(--space-2);
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-md);
   letter-spacing: 0.03em;
   text-transform: uppercase;
   z-index: 2;
-  box-shadow: var(--shadow-sm);
 }
 
 .project-card__number {
@@ -84,8 +82,7 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   color: var(--white);
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(4px);
+  background: rgba(17, 24, 39, 0.75);
   padding: var(--space-1) var(--space-2);
   border-radius: var(--radius-md);
   letter-spacing: 0.05em;
@@ -95,7 +92,7 @@
 .project-card__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(17, 24, 39, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,9 +130,10 @@
 }
 
 .project-card__title {
+  font-family: var(--font-family);
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
-  color: var(--gray-900);
+  color: var(--color-text);
   margin: 0;
   line-height: var(--line-height-snug);
   height: var(--card-title-height);
@@ -147,7 +145,7 @@
 
 .project-card__description {
   font-size: var(--font-size-sm);
-  color: var(--gray-500);
+  color: var(--color-text-subtle);
   line-height: var(--line-height-snug);
   margin: 0;
   height: var(--card-description-height);
@@ -168,24 +166,24 @@
 
 .tech-tag--card {
   padding: var(--space-1) var(--space-3);
-  background: var(--primary-50);
-  color: var(--primary-700);
-  border-radius: var(--radius-full);
+  background: var(--color-surface-alt);
+  color: var(--color-text-muted);
+  border-radius: var(--radius-md);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
-  border: 1px solid var(--primary-200);
+  border: 1px solid var(--color-border);
 }
 
 .tech-tag--more {
-  background: var(--gray-100);
-  color: var(--gray-600);
-  border-color: var(--gray-200);
+  background: var(--color-surface-alt);
+  color: var(--color-text-subtle);
+  border-color: var(--color-border);
 }
 
 .project-card__link {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
-  color: var(--primary-600);
+  color: var(--color-accent);
   transition: color var(--transition-fast);
   margin-top: auto;
   flex-shrink: 0;
@@ -193,7 +191,9 @@
 }
 
 .project-card:hover .project-card__link {
-  color: var(--primary-700);
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 @media (max-width: 480px) {

@@ -6,13 +6,24 @@
     "contact": "Contact"
   },
   "hero": {
-    "profession": "FULLSTACK DEVELOPER",
+    "profession": "Fullstack Developer",
+    "subtitle": "React, TypeScript, Node.js and Python",
     "location": "São José dos Campos, SP",
-    "description": "I build fast, modern web applications using React, TypeScript, Node.js and Python. I focus on clean code, great UX, and delivering on time. Currently available for freelance projects — let's build something great together."
+    "description": "I build fast, modern web applications with a focus on clean code, great UX, and delivering on time.",
+    "projectsCount": "5+ projects",
+    "freelanceAvailable": "Available for freelance",
+    "proofLabel": "Highlights",
+    "stacksLabel": "Core technologies"
   },
   "skills": {
     "title": "Skills",
-    "subtitle": "Technologies and tools I use in development"
+    "subtitle": "Technologies and tools I use in development",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "devops": "DevOps",
+      "tools": "Tools"
+    }
   },
   "projects": {
     "title": "Projects",
@@ -93,11 +104,13 @@
     "callToAction": "Let's talk!",
     "description": "I'm always open to new opportunities and collaborations. If you have a project in mind or would like to discuss possibilities, don't hesitate to get in touch.",
     "email": "Email",
-    "hireOnUpwork": "Hire me on Upwork",
-    "viewLinkedIn": "View on LinkedIn"
+    "viewLinkedIn": "View on LinkedIn",
+    "copyEmail": "Copy email",
+    "copySuccess": "Email copied!"
   },
   "footer": {
-    "copyright": "All rights reserved."
+    "copyright": "All rights reserved.",
+    "backToTop": "Back to top"
   },
   "common": {
     "viewProject": "View Project",

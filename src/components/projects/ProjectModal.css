@@ -1,13 +1,12 @@
 .project-modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(17, 24, 39, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
   padding: var(--space-4);
-  backdrop-filter: blur(8px);
 }
 
 .project-modal {
@@ -376,12 +375,11 @@
 .image-zoom-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.92);
+  background: rgba(17, 24, 39, 0.92);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2000;
-  backdrop-filter: blur(10px);
   animation: zoomOverlayFadeIn 0.2s ease-out;
   cursor: zoom-out;
 }
@@ -417,8 +415,7 @@
   top: var(--space-4);
   right: var(--space-4);
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   width: 48px;
   height: 48px;
@@ -427,7 +424,7 @@
   justify-content: center;
   cursor: pointer;
   color: white;
-  transition: all var(--transition-fast);
+  transition: background-color var(--transition-fast);
   z-index: 10;
 }
 
@@ -440,8 +437,7 @@
   top: 50%;
   transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: white;
   border-radius: 50%;
   width: 48px;
@@ -450,7 +446,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: background-color var(--transition-fast);
   z-index: 10;
 }
 

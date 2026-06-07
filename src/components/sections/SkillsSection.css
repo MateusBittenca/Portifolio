@@ -1,7 +1,7 @@
 /* Skills Section */
 .skills {
   padding: var(--section-padding) 0;
-  background: var(--white);
+  background: var(--color-surface-alt);
 }
 
 .skills__icons {
@@ -10,7 +10,6 @@
   align-items: center;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .skills {
     padding: var(--section-padding-mobile) 0;

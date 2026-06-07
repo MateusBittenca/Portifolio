@@ -21,7 +21,7 @@ function SkillsSection() {
         { icon: 'faNodeJs', name: 'Node.js', color: '#339933' },
         { icon: 'faMysql', name: 'MySQL', color: '#4479A1' },
         { icon: 'faDocker', name: 'Docker', color: '#2496ED' },
-        { icon: 'faJava', name: 'Java', color: '#007396' } 
+        { icon: 'faJava', name: 'Java', color: '#007396' }
     ];
 
     return (

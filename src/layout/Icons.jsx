@@ -1,18 +1,17 @@
 import "./Icons.css";
 import { motion, useReducedMotion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { 
-    faHtml5, 
-    faCss3, 
-    faJs, 
-    faReact, 
-    faPhp, 
-    faPython, 
+import {
+    faHtml5,
+    faCss3,
+    faJs,
+    faReact,
+    faPhp,
+    faPython,
     faGitAlt,
     faNodeJs,
     faDocker,
     faJava
-    
 } from "@fortawesome/free-brands-svg-icons";
 import { faDatabase, faFile } from "@fortawesome/free-solid-svg-icons";
 
@@ -117,8 +116,8 @@ function Icons({ icons, animated = true }) {
                         <CustomIcon />
                     </span>
                 ) : (
-                    <FontAwesomeIcon 
-                        icon={iconMap[skill.icon]} 
+                    <FontAwesomeIcon
+                        icon={iconMap[skill.icon]}
                         style={{ '--hover-color': skill.color }}
                     />
                 )}

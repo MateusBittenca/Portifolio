@@ -6,6 +6,8 @@ import { useTranslation } from '../../hooks/useTranslation';
 import './HeroSection.css';
 import EuImg from '../../assets/img/Eu.jpg';
 
+const STACK_TAGS = ['React', 'TypeScript', 'Node.js', 'Python'];
+
 function HeroSection() {
     const { t } = useTranslation();
     const nome = "Mateus Bittencourt";
@@ -21,22 +23,28 @@ function HeroSection() {
         <section id="about" className="hero">
             <div className="container">
                 <div className="hero__layout">
-                    <div className="hero__photo">
-                        <div className="hero__image">
-                            <img src={EuImg} alt="Mateus Bittencourt" />
-                        </div>
-                    </div>
-
-                    <div className="hero__info">
+                    <div className="hero__content">
+                        <p className="hero__eyebrow">{t('hero.profession')}</p>
                         <h1 className="hero__name">{nome}</h1>
-                        <p className="hero__title">{t('hero.profession')}</p>
+                        <p className="hero__subtitle">{t('hero.subtitle')}</p>
 
                         <div className="hero__location">
-                            <FontAwesomeIcon icon={faMapMarkerAlt} />
+                            <FontAwesomeIcon icon={faMapMarkerAlt} aria-hidden="true" />
                             <span>{t('hero.location')}</span>
                         </div>
 
                         <p className="hero__description">{t('hero.description')}</p>
+
+                        <div className="hero__proof" aria-label={t('hero.proofLabel')}>
+                            <span className="hero__badge">{t('hero.projectsCount')}</span>
+                            <span className="hero__badge hero__badge--accent">{t('hero.freelanceAvailable')}</span>
+                        </div>
+
+                        <div className="hero__stacks" aria-label={t('hero.stacksLabel')}>
+                            {STACK_TAGS.map((tag) => (
+                                <span key={tag} className="hero__stack-tag">{tag}</span>
+                            ))}
+                        </div>
 
                         <div className="hero__actions">
                             <button
@@ -65,6 +73,12 @@ function HeroSection() {
                             <a href="/assets/pdf/Currículo.pdf" className="social-link" download="Currículo.pdf" aria-label="Currículo">
                                 <FontAwesomeIcon icon={faFile} />
                             </a>
+                        </div>
+                    </div>
+
+                    <div className="hero__photo">
+                        <div className="hero__image">
+                            <img src={EuImg} alt="Mateus Bittencourt" />
                         </div>
                     </div>
                 </div>

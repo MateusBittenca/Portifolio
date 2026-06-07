@@ -55,7 +55,7 @@ function ProjectsSection() {
             demo: 'https://aprendaaqui.up.railway.app',
             featured: true,
             featuredBadge: t('projects.featuredBadge'),
-            accentColor: '#22c55e'
+            accentColor: '#059669'
         },
         {
             id: 'fi',
@@ -200,7 +200,7 @@ function ProjectsSection() {
     return (
         <section id="projects" className="projects">
             <div className="container">
-                <SectionHeader title={t('projects.title')} subtitle={t('projects.subtitle')} />
+                <SectionHeader title={t('projects.title')} subtitle={t('projects.subtitle')} centered />
             </div>
 
             <div className="projects__carousel">
